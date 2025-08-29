@@ -1,11 +1,5 @@
 # **Anomix - Advanced Phishing Email Analyzer**
 
-https://img.shields.io/badge/Anomix-Phishing%2520Analyzer-blue
-
-https://img.shields.io/badge/Python-3.8%252B-green
-
-https://img.shields.io/badge/License-MIT-orange
-
 Anomix is a comprehensive CLI-based phishing email analysis tool that automates email investigation by extracting artifacts (headers, URLs, attachments), enriching them with Threat Intelligence (TI) sources, and generating a risk score & incident report.
 
 ## **Features**
@@ -338,9 +332,3 @@ We welcome contributions to Anomix! Here's how you can help:
 - Improved report templates and formatting
 - Performance optimizations
 - Documentation improvements
-
-## **📞 Support**
-
-If you have questions or need help:
-1. Open an [Issue](https://github.com/yourusername/anomix/issues) for bugs or feature requests
-2. Email [bakeery](https://mailto:ethic.bakeery@gmail.com/) for direct assistance
