@@ -1,0 +1,225 @@
+<!-- PDF generation failed: No wkhtmltopdf executable found: "b''"
+If this file exists please check that this process can read it or you can pass path to it manually in method call, check README. Otherwise please install wkhtmltopdf - https://github.com/JazzCore/python-pdfkit/wiki/Installing-wkhtmltopdf -->
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Phishing Email Analysis Report</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+                h1 { color: #333; border-bottom: 2px solid #333; }
+                h2 { color: #555; margin-top: 30px; }
+                h3 { color: #777; }
+                .risk-high { color: red; font-weight: bold; }
+                .risk-medium { color: orange; font-weight: bold; }
+                .risk-low { color: green; font-weight: bold; }
+                table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+                th { background-color: #f2f2f2; }
+                tr:nth-child(even) { background-color: #f9f9f9; }
+                .indicator { background-color: #ffe6e6; padding: 5px; margin: 2px; border-radius: 3px; }
+                .summary { background-color: #f0f8ff; padding: 15px; border-radius: 5px; margin: 20px 0; }
+            </style>
+        </head>
+        <body>
+            <h1>Phishing Email Analysis Report</h1>
+            <p>Generated on: 2025-08-29 09:14:32</p>
+            
+            <div class="summary">
+                <h2>Summary</h2>
+                <p><strong>Subject:</strong> Microsoft account unusual sign-in activity</p>
+                <p><strong>From:</strong> Microsoft account team <no-reply@microsoft.com></p>
+                <p><strong>To:</strong> phishing@pot</p>
+                <p><strong>Date:</strong> 2022-11-03 02:44:27</p>
+                <p><strong>Risk Score:</strong> <span class="risk-red">100/100 - High Risk</span></p>
+            </div>
+            
+            <h2>Header Analysis</h2>
+            <p><strong>SPF:</strong> unknown</p>
+            <p><strong>DKIM:</strong> fail</p>
+            <p><strong>DMARC:</strong> fail</p>
+            
+            <h3>Received Headers</h3>
+            <table>
+                <tr>
+                    <th>IP Address</th>
+                    <th>Timestamp</th>
+                    <th>Reputation</th>
+                </tr>
+                
+                <tr>
+                    <td>103.167.154.120</td>
+                    <td>Thu, 3 Nov 2022 02:44:27 +0000</td>
+                    <td>0 malicious detections</td>
+                </tr>
+            
+            </table>
+            
+            <h2>Content Analysis</h2>
+            <p><strong>Suspicious Keywords Found:</strong> 0</p>
+            
+            <h3>URLs Found</h3>
+            <table>
+                <tr>
+                    <th>URL</th>
+                    <th>Domain</th>
+                    <th>VirusTotal</th>
+                    <th>URLHaus</th>
+                </tr>
+                
+                <tr>
+                    <td>http://sefnet.net/track/o7436EVFfO5968877utQY8065Q...</td>
+                    <td>sefnet.net</td>
+                    <td>4 malicious</td>
+                    <td>Clean</td>
+                </tr>
+            
+            </table>
+            
+            <h2>Attachment Analysis</h2>
+            <p><strong>Total Attachments:</strong> 0</p>
+            <p><strong>Malicious Attachments:</strong> 0</p>
+            
+            <h3>Attachment Details</h3>
+            <table>
+                <tr>
+                    <th>Filename</th>
+                    <th>Type</th>
+                    <th>Size</th>
+                    <th>Threat Level</th>
+                    <th>VirusTotal</th>
+                </tr>
+                
+            </table>
+            
+            <h2>Risk Assessment Breakdown</h2>
+            <table>
+                <tr>
+                    <th>Category</th>
+                    <th>Score</th>
+                </tr>
+                
+                <tr>
+                    <td>authentication_failure</td>
+                    <td>30</td>
+                </tr>
+            
+                <tr>
+                    <td>new_domain</td>
+                    <td>0</td>
+                </tr>
+            
+                <tr>
+                    <td>known_phishing_domain</td>
+                    <td>40</td>
+                </tr>
+            
+                <tr>
+                    <td>malicious_file</td>
+                    <td>0</td>
+                </tr>
+            
+                <tr>
+                    <td>malicious_url</td>
+                    <td>40</td>
+                </tr>
+            
+                <tr>
+                    <td>suspicious_keywords</td>
+                    <td>0</td>
+                </tr>
+            
+                <tr>
+                    <td>header_inconsistencies</td>
+                    <td>30</td>
+                </tr>
+            
+                <tr>
+                    <td>domain_mismatch</td>
+                    <td>25</td>
+                </tr>
+            
+                <tr>
+                    <td>hidden_content</td>
+                    <td>0</td>
+                </tr>
+            
+                <tr>
+                    <td>suspicious_formatting</td>
+                    <td>0</td>
+                </tr>
+            
+                <tr>
+                    <td>grammar_errors</td>
+                    <td>0</td>
+                </tr>
+            
+                <tr>
+                    <td>urgent_language</td>
+                    <td>0</td>
+                </tr>
+            
+                <tr>
+                    <td>free_email_service</td>
+                    <td>0</td>
+                </tr>
+            
+                <tr>
+                    <td>domain_misspelling</td>
+                    <td>0</td>
+                </tr>
+            
+                <tr>
+                    <td>unusual_send_time</td>
+                    <td>10</td>
+                </tr>
+            
+                <tr>
+                    <td>sensitive_info_request</td>
+                    <td>0</td>
+                </tr>
+            
+                <tr>
+                    <td>base64_content</td>
+                    <td>15</td>
+                </tr>
+            
+                <tr>
+                    <td>embedded_form</td>
+                    <td>0</td>
+                </tr>
+            
+                <tr>
+                    <td>tracking_pixel</td>
+                    <td>5</td>
+                </tr>
+            
+                <tr>
+                    <td>password_protected_attachment</td>
+                    <td>0</td>
+                </tr>
+            
+                <tr>
+                    <td>invoice_attachment</td>
+                    <td>0</td>
+                </tr>
+            
+                <tr>
+                    <td>suspicious_extension</td>
+                    <td>0</td>
+                </tr>
+            
+                <tr>
+                    <td><strong>Total Score</strong></td>
+                    <td><strong>100</strong></td>
+                </tr>
+            </table>
+            
+            <h2>Conclusion</h2>
+            <p>This email has been classified as <strong class="risk-red">High Risk</strong>.</p>
+            <p>Recommended action: Highly likely phishing, quarantine and investigate</p>
+        </body>
+        </html>
+        

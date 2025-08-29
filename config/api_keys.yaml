@@ -1,0 +1,10 @@
+# VirusTotal API Key
+virustotal: "9af05adeec7c4dbd8faa07ed086a3aa55c878be2610ec05d5c6072580344e5c1"
+
+# AbuseIPDB API Key
+abuseipdb: "2fb9a26025533440d5344e3053acaf009717beba7d048f0efd4ae74e1fc68cc6fc0c1a9c95ccff6a"
+
+# GreyNoise API Key
+greynoise: "your_greynoise_api_key_here"
+
+# Other API keys can be added here

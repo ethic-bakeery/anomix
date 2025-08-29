@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Email Analysis Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        h1 { color: #333; border-bottom: 2px solid #333; }
+        h2 { color: #555; margin-top: 30px; }
+        h3 { color: #777; }
+        .risk-high { color: red; font-weight: bold; }
+        .risk-medium { color: orange; font-weight: bold; }
+        .risk-low { color: green; font-weight: bold; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        .indicator { background-color: #ffe6e6; padding: 5px; margin: 2px; border-radius: 3px; }
+        .summary { background-color: #f0f8ff; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        .collapsible { background-color: #eee; color: #444; cursor: pointer; padding: 18px; width: 100%; border: none; text-align: left; outline: none; font-size: 15px; }
+        .active, .collapsible:hover { background-color: #ccc; }
+        .content { padding: 0 18px; display: none; overflow: hidden; background-color: #f1f1f1; }
+        .red-flag { background-color: #ffcccc; border-left: 5px solid #ff0000; padding: 10px; margin: 5px 0; }
+        .risk-factor { background-color: #fff3cd; border-left: 5px solid #ffc107; padding: 10px; margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>Phishing Email Analysis Report</h1>
+    <p>Generated on: {{ timestamp }}</p>
+    
+    <div class="summary">
+        <h2>Summary</h2>
+        <p><strong>Subject:</strong> {{ email_data.subject }}</p>
+        <p><strong>From:</strong> {{ email_data.from }}</p>
+        <p><strong>To:</strong> {{ email_data.to }}</p>
+        <p><strong>Date:</strong> {{ email_date }}</p>
+        <p><strong>Risk Score:</strong> <span class="risk-{{ risk_assessment.risk_level.lower().split()[0] }}">{{ risk_assessment.total_score }}/100 - {{ risk_assessment.risk_level }}</span></p>
+    </div>
+
+    <!-- Risk Score Breakdown -->
+    <h2>Risk Score Breakdown</h2>
+    <table>
+        <tr>
+            <th>Risk Factor</th>
+            <th>Score</th>
+            <th>Description</th>
+        </tr>
+        {% for factor, score in risk_assessment.score_breakdown.items() %}
+        {% if score > 0 %}
+        <tr>
+            <td>{{ factor.replace('_', ' ').title() }}</td>
+            <td>{{ score }}</td>
+            <td>
+                {% if factor == 'authentication_failure' %}SPF/DKIM/DMARC authentication failures
+                {% elif factor == 'new_domain' %}Newly registered domains (<30 days old)
+                {% elif factor == 'known_phishing_domain' %}Domains known for phishing
+                {% elif factor == 'malicious_file' %}Malicious attachments detected
+                {% elif factor == 'malicious_url' %}Malicious URLs detected
+                {% elif factor == 'suspicious_keywords' %}Suspicious keywords in content
+                {% elif factor == 'header_inconsistencies' %}Header inconsistencies found
+                {% elif factor == 'domain_mismatch' %}Domain mismatches between sender and links
+                {% elif factor == 'hidden_content' %}Hidden content detected
+                {% elif factor == 'suspicious_formatting' %}Suspicious formatting in email
+                {% elif factor == 'grammar_errors' %}Grammar errors or poor language quality
+                {% elif factor == 'urgent_language' %}Urgent or threatening language
+                {% elif factor == 'free_email_service' %}Free email service used for official communication
+                {% elif factor == 'domain_misspelling' %}Domain misspelling or homograph attack
+                {% elif factor == 'unusual_send_time' %}Email sent at unusual hours
+                {% elif factor == 'sensitive_info_request' %}Request for sensitive information
+                {% elif factor == 'base64_content' %}Base64 encoded content found
+                {% elif factor == 'embedded_form' %}Embedded forms detected
+                {% elif factor == 'tracking_pixel' %}Tracking pixels found
+                {% elif factor == 'password_protected_attachment' %}Password protected attachments
+                {% elif factor == 'invoice_attachment' %}Suspicious invoice attachments
+                {% elif factor == 'suspicious_extension' %}Files with suspicious extensions
+                {% else %}Unknown risk factor
+                {% endif %}
+            </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+        <tr style="font-weight: bold;">
+            <td>Total Score</td>
+            <td>{{ risk_assessment.total_score }}</td>
+            <td>{{ risk_assessment.risk_level }} risk level</td>
+        </tr>
+    </table>
+
+    <!-- Red Flags Section -->
+    {% set red_flags = [] %}
+    
+    <!-- Header Analysis Red Flags -->
+    {% if header_analysis.free_email_service.is_free_email %}
+        {% set _ = red_flags.append({'type': 'Sender', 'description': 'Free email service used: ' + header_analysis.free_email_service.domain}) %}
+    {% endif %}
+    
+    {% if header_analysis.domain_misspelling.is_misspelled %}
+        {% set _ = red_flags.append({'type': 'Sender', 'description': 'Domain misspelling detected: ' + header_analysis.domain_misspelling.suspicious_domain}) %}
+    {% endif %}
+    
+    {% for protocol in ['spf', 'dkim', 'dmarc'] %}
+        {% if header_analysis.authentication_results.get(protocol) == 'fail' %}
+            {% set _ = red_flags.append({'type': 'Authentication', 'description': protocol.upper() + ' authentication failed'}) %}
+        {% endif %}
+    {% endfor %}
+    
+    {% if header_analysis.send_time_analysis.is_unusual_time %}
+        {% set _ = red_flags.append({'type': 'Behavioral', 'description': header_analysis.send_time_analysis.warning}) %}
+    {% endif %}
+    
+    <!-- Content Analysis Red Flags -->
+    {% if content_analysis.sensitive_info_requests.sensitive_request_detected %}
+        {% set _ = red_flags.append({'type': 'Content', 'description': 'Request for sensitive information detected'}) %}
+    {% endif %}
+    
+    {% if content_analysis.base64_content.base64_detected %}
+        {% set _ = red_flags.append({'type': 'Content', 'description': 'Base64 encoded content found'}) %}
+    {% endif %}
+    
+    {% if content_analysis.embedded_forms.embedded_forms_detected %}
+        {% set _ = red_flags.append({'type': 'Content', 'description': 'Embedded forms detected'}) %}
+    {% endif %}
+    
+    {% if content_analysis.tracking_pixels.tracking_pixels_detected %}
+        {% set _ = red_flags.append({'type': 'Content', 'description': 'Tracking pixels detected'}) %}
+    {% endif %}
+    
+    {% if content_analysis.subject_analysis.urgency_detected %}
+        {% set _ = red_flags.append({'type': 'Subject', 'description': 'Urgent language in subject line'}) %}
+    {% endif %}
+    
+    {% if content_analysis.subject_analysis.too_good_detected %}
+        {% set _ = red_flags.append({'type': 'Subject', 'description': 'Too-good-to-be-true offer in subject'}) %}
+    {% endif %}
+    
+    {% if content_analysis.subject_analysis.fake_alert_detected %}
+        {% set _ = red_flags.append({'type': 'Subject', 'description': 'Fake alert in subject line'}) %}
+    {% endif %}
+    
+    {% if content_analysis.greeting_analysis.is_generic %}
+        {% set _ = red_flags.append({'type': 'Content', 'description': 'Generic greeting instead of personalized'}) %}
+    {% endif %}
+    
+    <!-- Attachment Analysis Red Flags -->
+    {% if attachment_analysis.password_protected_count > 0 %}
+        {% set _ = red_flags.append({'type': 'Attachment', 'description': 'Password protected attachments found'}) %}
+    {% endif %}
+    
+    {% if attachment_analysis.invoice_attachment_count > 0 %}
+        {% set _ = red_flags.append({'type': 'Attachment', 'description': 'Suspicious invoice attachments found'}) %}
+    {% endif %}
+    
+    {% for attachment in attachment_analysis.attachments %}
+        {% if attachment.suspicious_extension %}
+            {% set _ = red_flags.append({'type': 'Attachment', 'description': 'Suspicious file extension: ' + attachment.filename}) %}
+        {% endif %}
+    {% endfor %}
+    
+    <!-- Threat Intelligence Red Flags -->
+    {% for ip, intel in threat_intel.ips.items() %}
+        {% if intel.virustotal.malicious > 0 %}
+            {% set _ = red_flags.append({'type': 'Threat Intel', 'description': 'Malicious IP detected: ' + ip + ' (' + intel.virustotal.malicious|string + ' detections)'}) %}
+        {% endif %}
+    {% endfor %}
+    
+    {% for domain, intel in threat_intel.domains.items() %}
+        {% if intel.virustotal.malicious > 0 %}
+            {% set _ = red_flags.append({'type': 'Threat Intel', 'description': 'Malicious domain detected: ' + domain + ' (' + intel.virustotal.malicious|string + ' detections)'}) %}
+        {% endif %}
+    {% endfor %}
+    
+    {% for url, intel in threat_intel.urls.items() %}
+        {% if intel.virustotal.malicious > 0 %}
+            {% set _ = red_flags.append({'type': 'Threat Intel', 'description': 'Malicious URL detected: ' + url[:50] + '... (' + intel.virustotal.malicious|string + ' detections)'}) %}
+        {% endif %}
+    {% endfor %}
+    
+    <!-- Display Red Flags if any -->
+    {% if red_flags %}
+    <h2>🚩 Red Flags Detected</h2>
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        {% for flag in red_flags %}
+        <tr>
+            <td>{{ flag.type }}</td>
+            <td>{{ flag.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+    <button type="button" class="collapsible">Header Analysis</button>
+    <div class="content">
+        <p><strong>SPF:</strong> {{ header_analysis.spf_result }}</p>
+        <p><strong>DKIM:</strong> {{ header_analysis.dkim_result }}</p>
+        <p><strong>DMARC:</strong> {{ header_analysis.dmarc_result }}</p>
+        
+        <!-- Free Email Service -->
+        {% if header_analysis.free_email_service.is_free_email %}
+        <div class="red-flag">
+            <strong>Free Email Service:</strong> {{ header_analysis.free_email_service.warning }}
+        </div>
+        {% endif %}
+        
+        <!-- Domain Misspelling -->
+        {% if header_analysis.domain_misspelling.is_misspelled %}
+        <div class="red-flag">
+            <strong>Domain Misspelling:</strong> Detected suspicious domain {{ header_analysis.domain_misspelling.suspicious_domain }}
+            {% if header_analysis.domain_misspelling.potential_targets %}
+            targeting {{ header_analysis.domain_misspelling.potential_targets|join(', ') }}
+            {% endif %}
+        </div>
+        {% endif %}
+        
+        <!-- Unusual Send Time -->
+        {% if header_analysis.send_time_analysis.is_unusual_time %}
+        <div class="red-flag">
+            <strong>Unusual Send Time:</strong> {{ header_analysis.send_time_analysis.warning }}
+        </div>
+        {% endif %}
+        
+        <h3>Received Headers</h3>
+        <table>
+            <tr>
+                <th>IP Address</th>
+                <th>Timestamp</th>
+                <th>Reputation</th>
+            </tr>
+            {% for ip_info in ip_analysis %}
+            <tr>
+                <td>{{ ip_info.ip }}</td>
+                <td>{{ ip_info.timestamp }}</td>
+                <td>{{ ip_info.virustotal.get('malicious', 0) }} malicious detections</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <button type="button" class="collapsible">Content Analysis</button>
+    <div class="content">
+        <p><strong>Suspicious Keywords Found:</strong> {{ content_analysis.suspicious_keywords|length }}</p>
+        
+        <!-- Subject Analysis -->
+        <h3>Subject Analysis</h3>
+        {% if content_analysis.subject_analysis.urgency_detected %}
+        <div class="red-flag">
+            <strong>Urgency Detected:</strong> Subject contains urgent language
+        </div>
+        {% endif %}
+        
+        {% if content_analysis.subject_analysis.too_good_detected %}
+        <div class="red-flag">
+            <strong>Too Good To Be True:</strong> Subject contains offers that seem too good to be true
+        </div>
+        {% endif %}
+        
+        {% if content_analysis.subject_analysis.fake_alert_detected %}
+        <div class="red-flag">
+            <strong>Fake Alert:</strong> Subject contains fake security alerts
+        </div>
+        {% endif %}
+        
+        <!-- Greeting Analysis -->
+        <h3>Greeting Analysis</h3>
+        {% if content_analysis.greeting_analysis.is_generic %}
+        <div class="red-flag">
+            <strong>Generic Greeting:</strong> Email uses generic greeting instead of personalized name
+        </div>
+        {% endif %}
+        
+        <!-- Sensitive Information Requests -->
+        {% if content_analysis.sensitive_info_requests.sensitive_request_detected %}
+        <h3>Sensitive Information Requests</h3>
+        <div class="red-flag">
+            <strong>Sensitive Information Requested:</strong> 
+            <ul>
+                {% for keyword in content_analysis.sensitive_info_requests.keywords_found %}
+                <li>{{ keyword }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        
+        <h3>URLs Found</h3>
+        <table>
+            <tr>
+                <th>URL</th>
+                <th>Domain</th>
+                <th>VirusTotal</th>
+                <th>URLHaus</th>
+            </tr>
+            {% for url_info in url_analysis %}
+            <tr>
+                <td>{{ url_info.url[:50] }}...</td>
+                <td>{{ url_info.domain }}</td>
+                <td>{{ url_info.virustotal.get('malicious', 0) }} malicious</td>
+                <td>{{ 'Threat detected' if url_info.urlhaus.get('threat') and url_info.urlhaus.threat != 'not_found' else 'Clean' }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <button type="button" class="collapsible">Attachment Analysis</button>
+    <div class="content">
+        <p><strong>Total Attachments:</strong> {{ attachment_analysis.total_count }}</p>
+        <p><strong>Malicious Attachments:</strong> {{ attachment_analysis.malicious_count }}</p>
+        
+        <!-- Password Protected Attachments -->
+        {% if attachment_analysis.password_protected_count > 0 %}
+        <div class="red-flag">
+            <strong>Password Protected Attachments:</strong> {{ attachment_analysis.password_protected_count }} found
+        </div>
+        {% endif %}
+        
+        <!-- Invoice Attachments -->
+        {% if attachment_analysis.invoice_attachment_count > 0 %}
+        <div class="red-flag">
+            <strong>Invoice Attachments:</strong> {{ attachment_analysis.invoice_attachment_count }} found
+        </div>
+        {% endif %}
+        
+        <h3>Attachment Details</h3>
+        <table>
+            <tr>
+                <th>Filename</th>
+                <th>Type</th>
+                <th>Size</th>
+                <th>Threat Level</th>
+                <th>VirusTotal</th>
+            </tr>
+            {% for att in attachments_formatted %}
+            <tr>
+                <td>{{ att.filename }}</td>
+                <td>{{ att.file_type }}</td>
+                <td>{{ att.size }} bytes</td>
+                <td class="risk-{{ att.threat_level }}">{{ att.threat_level }}</td>
+                <td>{{ att.virustotal.get('malicious', 0) }} malicious</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <h2>Conclusion</h2>
+    <p>This email has been classified as <strong class="risk-{{ risk_assessment.risk_level.lower().split()[0] }}">{{ risk_assessment.risk_level }}</strong>.</p>
+    <p>Recommended action: 
+        {% if risk_assessment.risk_level == "Low Risk" %}
+            Likely safe, no action needed
+        {% elif risk_assessment.risk_level == "Medium Risk" %}
+            Suspicious, review carefully
+        {% else %}
+            Highly likely phishing, quarantine and investigate
+        {% endif %}
+    </p>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

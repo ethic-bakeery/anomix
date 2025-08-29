@@ -1,0 +1,285 @@
+{
+  "email_data": {
+    "headers": {
+      "Delivered-To": "au6576@srmist.edu.in",
+      "Received": "from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])        by mx.google.com with SMTPS id a640c23a62f3a-afefc9e801esor60375866b.4.2025.08.29.00.27.05        for <all-ftstudents-ktr@srmist.edu.in>        (Google Transport Security);        Fri, 29 Aug 2025 00:27:05 -0700 (PDT)",
+      "X-Forwarded-Encrypted": "i=1; AJvYcCVyDP6ST4A5ZsSmDLV6BbSP46vPEqkF7uQW9OHCz35t4SfXXUHyI11xyTGFi2VsGNRydFTcqfGtrqznwE+XzIU1+jg=@srmist.edu.in",
+      "X-Received": "by 2002:a17:907:934c:b0:ae1:a6a0:f2fe with SMTP id a640c23a62f3a-afe296e71b0mr2296069666b.36.1756452424047; Fri, 29 Aug 2025 00:27:04 -0700 (PDT)",
+      "ARC-Seal": "i=1; a=rsa-sha256; t=1756452425; cv=none;        d=google.com; s=arc-20240605;        b=e5BhYERICOKQfglX031Cbinwy7b6BjoH+WIHyoMEA/ftu8dJjcECG6UlKaz3ej1NqV         tfEU/YcAR4D0H1R+yztIgncVBYd7a5rn7+Dc7K7rQSPqPZxB4h1WCo17b9updtDSEpxN         NIjY6zX/FUfPujRUmBge/2pmRUayXQMVSkf6X7Q6Gu/ahDW/sI40iUA3g6x0zK2Qv7n0         lFC+xyCIoknlRZVCnY6efgXg5fBql9yypR7Tp6y4RR7kTLN9cNzplnqRWHVfI3ykIYn7         sQk8N8vIO/2a7A7T3ulrm4nt2lMJWYZIT2wKfNxwnczwzRvtdo6HjbJ8Ua7m2fk6Uh0l         My5w==",
+      "ARC-Message-Signature": "i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;        h=to:subject:message-id:date:from:mime-version:dkim-signature;        bh=7K2wB5lxCQr60vk9tTPwA30Cm8rk6yTUxIzp9FCTgVw=;        fh=kCkl7AxboSc3oOTgT6OSeqnIJB2/n7+/yvcygDCHhgo=;        b=ZEuXqrnMNioiMOLYvy420meZ5usJ4TQxyEzja31ki5T01Mn2mlBhGJrlEu7kNaMzX8         eoU/PphK72EiF/D4tsjCq+qPHv+NZhLqXNk4Kfs7jxGvNDGXXz2aPz0AoxYEL3vxtHr8         CxQ3DkSDAQtqxOUeVwW/sVLIB8ktDdLhZx0K/X+Q+XwpSfk5qxFttTh7EJTqPW5KY/N8         fyc8IS0uLkVWZQXqKTNh10sy2QTH0AxTLSQa0ck0P9ZYY0OWC/S/y7gSlerOZieID4r3         gn1Wu5zi6a5TX5/CO0ENW9ZeMmG0IAxRIz6qK9VYBFGclvncYfkvy4PhylslptpHhXZU         Tmhw==;        dara=google.com",
+      "ARC-Authentication-Results": "i=1; mx.google.com;       dkim=pass header.i=@srmist.edu.in header.s=google header.b=U7RHRQ8o;       spf=pass (google.com: domain of cic.cobotics@srmist.edu.in designates 209.85.220.41 as permitted sender) smtp.mailfrom=cic.cobotics@srmist.edu.in;       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=srmist.edu.in;       dara=pass header.i=@srmist.edu.in",
+      "Return-Path": "<all-ftstudents-ktr+bncBDGOZPHC7ENBBTFMYXCQMGQETXJRISY@srmist.edu.in>",
+      "Received-SPF": "pass (google.com: domain of cic.cobotics@srmist.edu.in designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;",
+      "Authentication-Results": "mx.google.com;       dkim=pass header.i=@srmist.edu.in header.s=google header.b=OGddY0dY;       arc=pass (i=2 spf=pass spfdomain=srmist.edu.in dkim=pass dkdomain=srmist.edu.in dmarc=pass fromdomain=srmist.edu.in);       spf=pass (google.com: domain of all-ftstudents-ktr+bncbdgozphc7enbbtfmyxcqmgqetxjrisy@srmist.edu.in designates 209.85.220.69 as permitted sender) smtp.mailfrom=all-ftstudents-ktr+bncBDGOZPHC7ENBBTFMYXCQMGQETXJRISY@srmist.edu.in;       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=srmist.edu.in;       dara=pass header.i=@srmist.edu.in",
+      "DKIM-Signature": "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=srmist.edu.in; s=google; t=1756452533; x=1757057333; darn=srmist.edu.in;        h=list-archive:list-help:list-post:list-id:mailing-list:precedence         :x-original-authentication-results:x-original-sender:to:subject         :message-id:date:from:mime-version:from:to:cc:subject:date         :message-id:reply-to;        bh=7K2wB5lxCQr60vk9tTPwA30Cm8rk6yTUxIzp9FCTgVw=;        b=OGddY0dYqLYRvOOWVsjKf8tB+wutH0Xw3YAVdABu7dN7Nw0lhJQzJZztXEiPS7001h         eG8l9GIDDp1b4DyN13+8+WJ+v6N+2tHsVPuYL/U1qRJz/jQCG7UnBg2kymVL3i2RnEXr         9b7Lvtjo03+xlNultOC6cEWb+gkYSGMibzA58=",
+      "X-Google-DKIM-Signature": "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=1e100.net; s=20230601; t=1756452533; x=1757057333;        h=list-archive:list-help:list-post:x-spam-checked-in-group:list-id         :mailing-list:precedence:x-original-authentication-results         :x-original-sender:to:subject:message-id:date:from:mime-version         :x-beenthere:x-gm-message-state:from:to:cc:subject:date:message-id         :reply-to;        bh=7K2wB5lxCQr60vk9tTPwA30Cm8rk6yTUxIzp9FCTgVw=;        b=c0PX5TWSfyIFIOYLW4UN7pXQqmou0eOLbu/KGJc07g5rjdl6BL+CP5GIGG047BfiaH         qq07r9hg7gvCtWzU097M/zJZznVSPgqLMGTdEnAehe1AcMZVDS8v5yXQTdFm9iPeMPdB         nltG/wjtf6BSwE2h4QwtI9CPt6mcZx++23pX4XzZs5P2BjVnmZFEsJQpOQdcsjyn6Dib         sT83Q59yt4srRPWKpOR98KwNWxxHmmYWpLME9GiKaTFdhHocHjHqBBC2dHIXUQnuD/KK         26h+knsJ1oR0mehaBuzfQj3BV0S4XLECY15YK526EhfqhUF4csG6CaXKebNpIWwuiVAg         6BAQ==",
+      "X-Gm-Message-State": "AOJu0YzJtsBkPZ5o2cR39RJDVU8ELsLuF8C43T3/Bs3qJUIhIZ1qmay3\tMkkH5ADfa0fxYo251R/pt5xdISj/J6CdaFGFBOziwtYr3kvXkYopsuL+jXLqCRtGo/0How==",
+      "X-Google-Smtp-Source": "AGHT+IGuA3d03K03kefXc7JOJgz8d/1LSIA/EhtOSVLIhPNr5MDlzi09qZYAFxve8H5xU0uFB7DJdA==",
+      "X-BeenThere": "all-ftstudents-ktr@srmist.edu.in; h=AZMbMZcvshD8hcDBfYUb6Keq2hSWwKhL8QgNxkiZPzVd0STjkw==",
+      "X-Gm-Gg": "ASbGncuXfUkbpohZ3BiMabR1+Yrlt4WvmNxmZvAnunsy6gJp6UEoLb3R1k8X40I7D/T\tkkvhW2/kMf3J14zUyEI/ouFTUtsUeAT6v8E4Eu8SesBpoV8ydIcxT6veC7Uwx/3YHudPQc7edCx\tvwiVC8FrCVXsMsin5iIelVE3uNQX7JSlrRq/oedch1W1/Uc63flwsLr6k0PdsfrhJ7ycFAvbql2\tB2CWorI1NkQWnqsPNaRnahxrWGfDhcnOndLQMNHexPZZ+VhMqVrir0CvF2+wvMk+DR2",
+      "MIME-Version": "1.0",
+      "From": "CIC COBOTICS <cic.cobotics@srmist.edu.in>",
+      "Date": "Fri, 29 Aug 2025 11:48:52 +0530",
+      "X-Gm-Features": "Ac12FXwfiQzwp0kHfYk-qpqfQY3XdW47ce3HeqZ5bh7-dYYUQMzO0qM0zh_7k4g",
+      "Message-ID": "<CALXtbK3Ke2=-Pm-YTyoAGNMoHu7jwkPbFLoaVJkjoXgYDrJhcA@mail.gmail.com>",
+      "Subject": "Invite for Deep Tech Domain Meet on 12 & 13 September 2025",
+      "To": "undisclosed-recipients:;",
+      "Content-Type": "multipart/mixed; boundary=\"000000000000cd8545063d7bf20b\"",
+      "Bcc": "all-ftstudents-ktr@srmist.edu.in",
+      "X-Original-Sender": "cic.cobotics@srmist.edu.in",
+      "X-Original-Authentication-Results": "mx.google.com;       dkim=pass header.i=@srmist.edu.in header.s=google header.b=U7RHRQ8o;       spf=pass (google.com: domain of cic.cobotics@srmist.edu.in designates 209.85.220.41 as permitted sender) smtp.mailfrom=cic.cobotics@srmist.edu.in;       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=srmist.edu.in;       dara=pass header.i=@srmist.edu.in",
+      "Precedence": "list",
+      "Mailing-list": "list all-ftstudents-ktr@srmist.edu.in; contact all-ftstudents-ktr+owners@srmist.edu.in",
+      "List-ID": "<all-ftstudents-ktr.srmist.edu.in>",
+      "X-Spam-Checked-In-Group": "all-ftstudents-ktr@srmist.edu.in",
+      "X-Google-Group-Id": "529508379048",
+      "List-Post": "<https://groups.google.com/a/srmist.edu.in/group/all-ftstudents-ktr/post>, <mailto:all-ftstudents-ktr@srmist.edu.in>",
+      "List-Help": "<https://support.google.com/a/srmist.edu.in/bin/topic.py?topic=25838>, <mailto:all-ftstudents-ktr+help@srmist.edu.in>",
+      "List-Archive": "<https://groups.google.com/a/srmist.edu.in/group/all-ftstudents-ktr/>"
+    },
+    "subject": "Invite for Deep Tech Domain Meet on 12 & 13 September 2025",
+    "from": "CIC COBOTICS <cic.cobotics@srmist.edu.in>",
+    "to": "undisclosed-recipients:;",
+    "cc": "",
+    "bcc": "all-ftstudents-ktr@srmist.edu.in",
+    "date": "Fri, 29 Aug 2025 11:48:52 +0530",
+    "body": {
+      "text": "Dear Innovators,\nPFA and avail this opportunity. Kindly share with your students also.\n\n\nWith thanks and regards\nDr Selvakumaran T / Associate Professor / Aerospace / 98943 82339\nCo-innovation Mentor -  *Innovating the* *INNO**VATORS*\nCiC, SRMIST, Supported by IHFC - IIT Delhi - NMICPS - DST\n6th floor, CRC Building, SRMIST Main Campus\n",
+      "html": "<div dir=\"ltr\"><div>Dear Innovators,</div><div>PFA and avail this opportunity. Kindly share with your students also.</div><div><br></div><div><br></div><div>\n<div><div><div>With thanks and regards</div><div><div style=\"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:16px\">Dr Selvakumaran T / Associate Professor / Aerospace / 98943 82339</div><div style=\"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:16px\">Co-innovation Mentor -  <span style=\"color:rgb(0,0,255)\"><b>Innovating the</b> <b>INNO</b><b>VATORS</b></span><br></div><div style=\"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:16px\">CiC, SRMIST, Supported by IHFC - IIT Delhi - <span style=\"font-size:12pt;line-height:17.12px;font-family:&quot;Times New Roman&quot;,serif\">NMICPS</span> - DST<br></div><div style=\"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:16px\">6th floor, CRC Building, SRMIST Main Campus</div></div></div></div>\n\n <br><br></div></div>\n"
+    },
+    "attachments": [
+      {
+        "filename": "Deep Tech Summit 2025_29.08.2025.pdf",
+        "content_type": "application/pdf",
+        "size": 683519,
+        "payload": "<binary data: 683519 bytes>"
+      }
+    ]
+  },
+  "header_analysis": {
+    "spf_result": "pass",
+    "dkim_result": "pass",
+    "dmarc_result": "pass",
+    "sender_domain": "srmist.edu.in",
+    "reply_to_domain": "",
+    "received_chain": [
+      {
+        "from_ip": "209.85.220.41",
+        "by_domain": "mx.google.com",
+        "with_protocol": "smtp",
+        "timestamp": "Fri, 29 Aug 2025 00:27:05 -0700"
+      }
+    ],
+    "x_headers": {},
+    "authentication_results": {
+      "spf": "pass",
+      "dkim": "pass",
+      "dmarc": "pass"
+    },
+    "message_id_analysis": {
+      "message_id": "<CALXtbK3Ke2=-Pm-YTyoAGNMoHu7jwkPbFLoaVJkjoXgYDrJhcA@mail.gmail.com>",
+      "domain_match": false,
+      "message_id_domain": "mail.gmail.com",
+      "sender_domain": "srmist.edu.in"
+    },
+    "header_inconsistencies": [],
+    "free_email_service": {
+      "is_free_email": false,
+      "domain": "srmist.edu.in",
+      "warning": null
+    },
+    "domain_misspelling": {
+      "is_misspelled": false,
+      "original_domain": "srmist.edu.in",
+      "suspicious_domain": null,
+      "potential_targets": []
+    },
+    "domain_age_info": {
+      "domain": "srmist.edu.in",
+      "is_new_domain": null,
+      "registration_date": null,
+      "age_days": null
+    },
+    "send_time_analysis": {
+      "send_time": "2025-08-29T11:48:52+05:30",
+      "is_unusual_time": false,
+      "warning": null
+    }
+  },
+  "content_analysis": {
+    "urls": [],
+    "suspicious_keywords": [],
+    "language_analysis": {
+      "has_grammar_errors": false,
+      "has_urgent_language": false,
+      "has_unicode_homoglyphs": false,
+      "readability_score": 0,
+      "language_mismatch": {
+        "language_detected": "en",
+        "potential_mismatch": false,
+        "warning": null
+      }
+    },
+    "formatting_analysis": {
+      "hidden_elements": [],
+      "link_text_mismatch": [],
+      "suspicious_forms": [],
+      "external_resources": []
+    },
+    "domain_mismatch": [],
+    "hidden_text": [],
+    "subject_analysis": {
+      "urgency_detected": false,
+      "too_good_detected": false,
+      "fake_alert_detected": false,
+      "keywords_found": []
+    },
+    "greeting_analysis": {
+      "is_generic": false,
+      "greeting_found": null,
+      "is_personalized": false
+    },
+    "sensitive_info_requests": {
+      "sensitive_request_detected": false,
+      "keywords_found": [],
+      "context_examples": []
+    },
+    "base64_content": {
+      "base64_detected": false,
+      "encoded_blocks": []
+    },
+    "embedded_forms": {
+      "embedded_forms_detected": false,
+      "form_details": []
+    },
+    "tracking_pixels": {
+      "tracking_pixels_detected": false,
+      "pixel_details": []
+    }
+  },
+  "attachment_analysis": {
+    "attachments": [
+      {
+        "filename": "Deep Tech Summit 2025_29.08.2025.pdf",
+        "size": 683519,
+        "content_type": "application/pdf",
+        "hashes": {
+          "md5": "d390d8c2981cfc5665b15fa1edc4ec27",
+          "sha1": "b629e150c4fcc3971a32d19e7bf4a61c7b87fe9d",
+          "sha256": "8b748dca04165ff86337b8c8dd72bc515463b657f3803a6760b164b73e11b177"
+        },
+        "file_type": "pdf",
+        "threat_level": "clean",
+        "indicators": [],
+        "is_password_protected": false,
+        "is_invoice_related": false,
+        "suspicious_extension": false
+      }
+    ],
+    "total_count": 1,
+    "malicious_count": 0,
+    "suspicious_count": 0,
+    "password_protected_count": 0,
+    "invoice_attachment_count": 0
+  },
+  "threat_intel": {
+    "ips": {
+      "209.85.220.41": {
+        "virustotal": {
+          "malicious": 1,
+          "suspicious": 1,
+          "harmless": 62,
+          "undetected": 30
+        },
+        "abuseipdb": {
+          "abuse_confidence_score": 60,
+          "total_reports": 43,
+          "country": "US",
+          "isp": "Google LLC",
+          "usage_type": "Data Center/Web Hosting/Transit"
+        },
+        "greynoise": {
+          "classification": "benign",
+          "riot": true,
+          "noise": false,
+          "name": "Google APIs and Services"
+        },
+        "geoip": {
+          "country": "United States",
+          "region": "California",
+          "city": "Mountain View",
+          "zip": "94035",
+          "lat": 37.3861,
+          "lon": -122.084,
+          "isp": "Google LLC",
+          "org": "Google LLC",
+          "as": "AS15169 Google LLC"
+        }
+      }
+    },
+    "urls": {},
+    "domains": {
+      "srmist.edu.in": {
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "harmless": 64,
+          "undetected": 30
+        },
+        "whois": {
+          "registrar": null,
+          "creation_date": "None",
+          "expiration_date": "None",
+          "name_servers": [],
+          "emails": null
+        },
+        "domain_age": null
+      }
+    },
+    "hashes": {
+      "d390d8c2981cfc5665b15fa1edc4ec27": {
+        "virustotal": {
+          "error": "API error: 404"
+        }
+      },
+      "b629e150c4fcc3971a32d19e7bf4a61c7b87fe9d": {
+        "virustotal": {
+          "error": "API error: 404"
+        }
+      },
+      "8b748dca04165ff86337b8c8dd72bc515463b657f3803a6760b164b73e11b177": {
+        "virustotal": {
+          "error": "API error: 404"
+        }
+      }
+    }
+  },
+  "risk_assessment": {
+    "total_score": 0,
+    "risk_level": "Low Risk",
+    "score_breakdown": {
+      "authentication_failure": 0,
+      "new_domain": 0,
+      "known_phishing_domain": 0,
+      "malicious_file": 0,
+      "malicious_url": 0,
+      "suspicious_keywords": 0,
+      "header_inconsistencies": 0,
+      "domain_mismatch": 0,
+      "hidden_content": 0,
+      "suspicious_formatting": 0,
+      "grammar_errors": 0,
+      "urgent_language": 0,
+      "free_email_service": 0,
+      "domain_misspelling": 0,
+      "unusual_send_time": 0,
+      "sensitive_info_request": 0,
+      "base64_content": 0,
+      "embedded_form": 0,
+      "tracking_pixel": 0,
+      "password_protected_attachment": 0,
+      "invoice_attachment": 0,
+      "suspicious_extension": 0
+    }
+  }
+}

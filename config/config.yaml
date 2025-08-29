@@ -1,0 +1,39 @@
+# Phishing Email Analyzer Configuration
+
+# API settings
+api:
+  timeout: 10
+  retries: 3
+
+# Risk scoring weights
+risk_weights:
+  authentication_failure: 15
+  new_domain: 20
+  known_phishing_domain: 40
+  malicious_file: 50
+  malicious_url: 40
+  suspicious_keywords: 10
+  header_inconsistencies: 15
+  domain_mismatch: 25
+  hidden_content: 20
+  suspicious_formatting: 15
+  grammar_errors: 10
+  urgent_language: 15
+
+# Reporting options
+reporting:
+  default_format: json
+  output_directory: outputs
+  include_full_headers: false
+  include_attachment_content: false
+
+# ML model settings
+model:
+  features:
+    - num_urls
+    - num_attachments
+    - has_suspicious_keywords
+    - auth_failures
+    - domain_mismatches
+    - hidden_content
+  algorithm: random_forest

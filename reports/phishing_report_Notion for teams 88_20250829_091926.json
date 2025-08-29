@@ -1,0 +1,1145 @@
+{
+  "email_data": {
+    "headers": {
+      "Delivered-To": "nngalliance@gmail.com",
+      "Received": "from localhost (2.worker.customeriomail.com [130.211.229.195]) by 53ad9ba7482a with SMTP id 6895a0b15dc50fc4fcaff063 (version=TLS1.3, cipher=TLS_AES_128_GCM_SHA256); Fri, 08 Aug 2025 07:01:05 GMT",
+      "X-Google-Smtp-Source": "AGHT+IF1F0zOlw6IHSlWUCBs0IKtKSzSV0h/DmlIkPwamb5uUrSz8Ted6lwbLN9Ug5RsKn700OqN",
+      "X-Received": "by 2002:ad4:5dea:0:b0:707:5633:d702 with SMTP id 6a1803df08f44-7099a198e69mr25050086d6.9.1754636466599;        Fri, 08 Aug 2025 00:01:06 -0700 (PDT)",
+      "ARC-Seal": "i=1; a=rsa-sha256; t=1754636466; cv=none;        d=google.com; s=arc-20240605;        b=JOmoqivfsnsw3mGzU64QWWgXHexBwHUBaZVq7394AKOvdM7Vrneb+1vlFWyLMIskVG         meq6ZPxPnCQEcak5kuKckj0/uV/D1+Dbu9DoIke/p+lmfYSE1WzZfrHcaL/6+zemcwk4         K5FfPCUZs6Edoo2VV2Rj8vfKfs0ibAEHBs7QCDHHe/eJhAI4YzisZu8JjtPEKMU2qlLE         BJpVgxDYG8rM5iMqst/Z7DetxpWApvUs2MZRTMeT1/jHVDJAhWSgwR0BqHKSLDBMv8Jo         UXZyc66GiurCxHHl+RjlTE9TgoezlIcEYz7FYCVTCfsB9Gx0DFAlo2S1DPAz4UyKWkpU         FUZw==",
+      "ARC-Message-Signature": "i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;        h=to:subject:mime-version:message-id:list-unsubscribe-post         :list-unsubscribe:from:date:sender:dkim-signature:dkim-signature;        bh=n77N/ltiMiq3qafw1OKP1npwuFtntbkxf2ICnJVn/4I=;        fh=vh8OLCe3//DDImI27hikcxgPwUWm53O4nVj1KaWMY6o=;        b=IWIOUhj9NRiCoAa0egodSFj0n40/aJ2p2QMM2hs2ZRX8LjjpB1jSSJrScOR61/B+/g         y74tsjaVGNlZh431PSMG8cDy2ZNEcxdW74xqy6EyIDB1Anm9Dh+e1YgooeuhPmmoj+WR         o3MBG53v7RwiQDQAaSQLP6/uc8UV9N8Z9xWtpk5qj5+LZV4y8PG/k6PmEvJ8KDZ9duzl         y7fUDyOXcy8laH9h/hHmr5rcKFMwUpgBLEMg23+VEnu8e1dl4xDlK6hWCfWIAz1xxpC6         abifCG8wNwuhCiZzdAe9XJsazcV13V3oiaBxlwv0zRoc3c736FzsKGjhaVFhzJ9GWPSS         /kKg==;        dara=google.com",
+      "ARC-Authentication-Results": "i=1; mx.google.com;       dkim=pass header.i=@mail.notion.so header.s=pic header.b=dQOyYFwh;       dkim=pass header.i=@mailgun.org header.s=mg header.b=RKxnsoKd;       spf=pass (google.com: domain of bounce+ef7a19.074921-nngalliance=gmail.com@mail.notion.so designates 143.55.229.26 as permitted sender) smtp.mailfrom=\"bounce+ef7a19.074921-nngalliance=gmail.com@mail.notion.so\";       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=mail.notion.so",
+      "Return-Path": "<bounce+ef7a19.074921-nngalliance=gmail.com@mail.notion.so>",
+      "Received-SPF": "pass (google.com: domain of bounce+ef7a19.074921-nngalliance=gmail.com@mail.notion.so designates 143.55.229.26 as permitted sender) client-ip=143.55.229.26;",
+      "Authentication-Results": "mx.google.com;       dkim=pass header.i=@mail.notion.so header.s=pic header.b=dQOyYFwh;       dkim=pass header.i=@mailgun.org header.s=mg header.b=RKxnsoKd;       spf=pass (google.com: domain of bounce+ef7a19.074921-nngalliance=gmail.com@mail.notion.so designates 143.55.229.26 as permitted sender) smtp.mailfrom=\"bounce+ef7a19.074921-nngalliance=gmail.com@mail.notion.so\";       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=mail.notion.so",
+      "DKIM-Signature": "a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1754636465; x=1754643665; h=To: To: Subject: Subject: Mime-Version: Message-Id: List-Unsubscribe-Post: List-Unsubscribe: From: From: Date: Content-Type: Sender: Sender: X-Feedback-Id; bh=n77N/ltiMiq3qafw1OKP1npwuFtntbkxf2ICnJVn/4I=; b=RKxnsoKdf4W5cgFPzmlC8zq5LcgatWtb49j48fUX6vFVxyTML1MOg/MWBgGBEpKV4f39tazudiCXytl2c7oaWIag1pco6IbqCaRGNbbdRem6H0pTIC7PuAvtKZXNow0T9+X7nkjP/hCD03vIvMwd0jp2gFWx9ho/Ftu4tawkfDU=",
+      "X-Mailgun-Sid": "WyJmNWY5MiIsIm5uZ2FsbGlhbmNlQGdtYWlsLmNvbSIsIjA3NDkyMSJd",
+      "X-Feedback-Id": "zoe@mail.notion.so::66b151edc046d1ce483450e3:mailgun",
+      "X-Mailgun-Sending-Ip": "143.55.229.26",
+      "Sender": "zoe@mail.notion.so",
+      "Content-Type": "multipart/alternative; boundary=\"ecd60c3a1a41c7ca82fc4b6c2866ac861d20187f1ec296d26db5aeaddb36\"; charset=\"utf-8\"",
+      "Date": "Fri, 08 Aug 2025 07:01:05 +0000",
+      "From": "Zoe at Notion <zoe@mail.notion.so>",
+      "List-Unsubscribe": "<mailto:32.MRTVI5RSIFKUEQKQG5UXU3CIHE2HGNKSIFNGSSLFG5DFKUT2I5RECX3UGJXC2MDGOZ3T2PI=@unsubscribe2.customer.io>, <https://e.customeriomail.com/unsubscribe/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==>",
+      "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+      "Message-Id": "<dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw.1754636465@mail.notion.so>",
+      "Mime-Version": "1.0",
+      "Subject": "Notion for teams (8/8):",
+      "To": "nngalliance@gmail.com",
+      "X-Mailer": "Customer.io (dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==; +https://whatis.customeriomail.com)",
+      "X-Mailgun-Variables": "{\"email_id\":\"dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==\"}",
+      "X-Report-Abuse-To": "badactor@customer.io"
+    },
+    "subject": "Notion for teams (8/8):",
+    "from": "Zoe at Notion <zoe@mail.notion.so>",
+    "to": "nngalliance@gmail.com",
+    "cc": "",
+    "bcc": "",
+    "date": "Fri, 08 Aug 2025 07:01:05 +0000",
+    "body": {
+      "text": "( https://www.notion.so/?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io )\n\nIntegrate everything else. Connect your tools. ( https://notion.so/?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io )\n\nYour first week in Notion\n\nThere's something satisfying about checking something off your to-do list. And you just finished your first week in Notion!\n\nHere's how it went:\n\nYou created a connected workspace\n\nYou created your first page\n\nYou invited more teammates\n\nYou tried out Notion's desktop app\n\nYou tried out Notion's mobile app \n\nYou're almost there! Let's keep going.\n\nHead back to your workspace and collaborate with your team on your docs, projects, and knowledge.\n\nKeep building ( https://notion.so?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io )\n\nThanks\n\nThe Notion Team\n\n( https://www.notion.so/?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io )\n\nWrite, plan, organize.\nIn one AI-powered workspace.\n\nNotion ( https://www.notion.so/?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io )\nNotion Mail ( https://www.notion.com/product/mail?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io )\nNotion Calendar ( https://www.notion.com/product/calendar?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io )\n\n685 Market Street, San Francisco, CA 94105\n\nDon't want this kind of email? Unsubscribe from Product Updates and Releases ( http://track.customer.io/unsubscribe/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw== ).\nManage preferences ( http://track.customer.io/manage_subscription_preferences/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw== ) Privacy Policy ( https://www.notion.so/notion/Privacy-Policy-3468d120cf614d4c9014c09f6adc9091?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io ) View in browser ( http://track.customer.io/deliveries/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw== )",
+      "html": "<!DOCTYPE html><html lang=\"en_US\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\"><head>\n        <title>\n          \n        </title>\n        <!--[if !mso]><!-->\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\n        <!--<![endif]-->\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>\n        <style type=\"text/css\">\n          #outlook a { padding:0; }\n          body { margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%; }\n          table, td { border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt; }\n          img { border:0;height:auto;line-height:100%; outline:none;text-decoration:none;-ms-interpolation-mode:bicubic; }\n          p { display:block;margin:13px 0; }\n        </style>\n        <!--[if mso]>\n        <noscript>\n        <xml>\n        <o:OfficeDocumentSettings>\n          <o:AllowPNG/>\n          <o:PixelsPerInch>96</o:PixelsPerInch>\n        </o:OfficeDocumentSettings>\n        </xml>\n        </noscript>\n        <![endif]-->\n        <!--[if lte mso 11]>\n        <style type=\"text/css\">\n          .mj-outlook-group-fix { width:100% !important; }\n        </style>\n        <![endif]-->\n        \n      <!--[if !mso]><!-->\n        <link href=\"https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500%2C700\" rel=\"stylesheet\" type=\"text/css\"/>\n<link href=\"https://fonts.googleapis.com/css?family=Ubuntu%3A300%2C400%2C500%2C700\" rel=\"stylesheet\" type=\"text/css\"/>\n        <style type=\"text/css\">\n          @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);\n@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);\n        </style>\n      <!--<![endif]-->\n\n    \n        \n    <style type=\"text/css\">\n      @media only screen and (min-width:480px) {\n        .mj-column-per-100 { width:100% !important; max-width: 100%; }\n      }\n    </style>\n    <style media=\"screen and (min-width:480px)\">\n      .moz-text-html .mj-column-per-100 { width:100% !important; max-width: 100%; }\n    </style>\n    \n  \n        <style type=\"text/css\">\n        \n        \n\n    @media only screen and (max-width:480px) {\n      table.mj-full-width-mobile { width: 100% !important; }\n      td.mj-full-width-mobile { width: auto !important; }\n    }\n  \n        </style>\n        <style type=\"text/css\">a:not([class]) {\n        color: currentColor;\n      }\n\n      :focus {\n        outline: 2px dashed;\n        outline-offset: 0.25rem;\n      }\n\n      main:focus {\n        outline: none;\n      }\n\n      [href]:hover {\n        text-decoration: none;\n      }\n\n      ::selection {\n        color: #fff;\n        background: rgba(0, 0, 0, 0.99);\n      }\n\n      .flow > * + * {\n        margin-top: 1em;\n      }\n\n      /* Remove default styling for dates in iOS\n         https://www.litmus.com/blog/how-to-remove-blue-links-in-html-emails/ */\n      a[x-apple-data-detectors] {\n        color: inherit !important;\n        text-decoration: none !important;\n        font-size: inherit !important;\n        font-family: inherit !important;\n        font-weight: inherit !important;\n        line-height: inherit !important;\n      }\n      body{\n        padding-top: 60px;\n      }\n\n      .unsubscribe {\n        color: #4898C9 !important;\n        display: inline-block;\n        border-bottom: 1px solid #4898C9 !important;\n      }\n\n      @media screen and (max-width: 480px) {\n        .section > table > tbody > tr > td {\n          padding-left: 30px !important;\n          padding-right: 30px !important;\n        }\n        .column-left,.column-right{\n          display: block !important;\n          width: 100% !important;\n          padding-left: 0 !important;\n          padding-right: 0 !important;\n        }\n        .float-center > table{\n          margin: 0 auto !important;\n        }\n      }</style>\n        \n      </head>\n      <body style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; word-spacing: normal; background-color: #FFFFFF;\"><div style=\"display: none; max-height: 0px; overflow: hidden; mso-hide:all;\">First week in Notion.  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ </div>\n        \n        \n      <div class=\"body\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; background-color: #FFFFFF;\">\n        <!-- Header section -->\n      \n      <!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"section-outlook\" role=\"presentation\" style=\"width:600px;\" width=\"600\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n    \n      \n      <div class=\"section\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; margin: 0px auto; max-width: 600px;\">\n        \n        <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; width: 100%;\" width=\"100%\">\n          <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n            <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n              <td style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; direction: ltr; font-size: 0px; padding: 0 60px 40px 60px; text-align: center;\" align=\"center\">\n                <!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:480px;\" ><![endif]-->\n            \n      <div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-size: 0px; text-align: left; direction: ltr; display: inline-block; vertical-align: top; width: 100%;\">\n        \n      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n        <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n          <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n            <td style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; vertical-align: top; padding: 0;\" valign=\"top\">\n              \n      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\" width=\"100%\">\n        <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n          \n              <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n                <td align=\"left\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-size: 0px; padding: 0; padding-bottom: 60px; word-break: break-word;\">\n                  \n      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; border-collapse: collapse; border-spacing: 0px;\">\n        <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n          <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n            <td style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; width: 32px;\" width=\"32\">\n     <a href=\"https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5zby8_dXRtX2NhbXBhaWduPUpvaW5lcitPbmJvYXJkaW5nKzIwMjVcdTAwMjZ1dG1fY2FtcGFpZ25pZD01MjVcdTAwMjZ1dG1fY2FtcGFpZ250eXBlPXRyYW5zYWN0aW9uYWxcdTAwMjZ1dG1fY29udGVudD1FbWFpbCs4Ky0rY2hlY2tsaXN0XHUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiJlZmQ4MDVjOTJjY2Q0ZGZlZTJjZTUxIiwibGlua19pZCI6Mn0/fa70aa5569ffc57f582c3eea8d9f93344c919b06413b4d7925ac33ffa0116ae4\" target=\"_blank\">         \n      <img height=\"auto\" src=\"https://images.scalero.io/email_assets/3766/9G4X95BQXWZ97Y4SMTOY3K2LWDZZ03CWX904KK6B9RXN8NT5KXDNZ2JKZF5QYHU3.png\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -ms-interpolation-mode: bicubic; border: 0; display: block; outline: none; text-decoration: none; height: auto; width: 100%; font-size: 13px;\" width=\"32\"/>\n    </a>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n    \n                </td>\n              </tr>\n            \n              <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n                <td align=\"center\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-size: 0px; padding: 0; word-break: break-word;\">\n                  \n      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; border-collapse: collapse; border-spacing: 0px;\">\n        <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n          <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n            <td style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; width: 300px;\" width=\"300\">\n              \n        <a href=\"https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vbm90aW9uLnNvLz91dG1fY2FtcGFpZ249Sm9pbmVyK09uYm9hcmRpbmcrMjAyNVx1MDAyNnV0bV9jYW1wYWlnbmlkPTUyNVx1MDAyNnV0bV9jYW1wYWlnbnR5cGU9dHJhbnNhY3Rpb25hbFx1MDAyNnV0bV9jb250ZW50PUVtYWlsKzgrLStjaGVja2xpc3RcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8iLCJpbnRlcm5hbCI6ImVmZDgwNWM5MmNjZDRkZmVlMmNlNTEiLCJsaW5rX2lkIjoxOTU1fQ/5be61f01c38d012d2602db82bd7801ea76b630c0cb0fd63f9e35ef29166f09cb\" target=\"_blank\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; color: #0984CF; text-decoration: none;\">   \n      <img alt=\"Integrate everything else. Connect your tools.\" height=\"auto\" src=\"https://userimg-bee.customeriomail.com/images/client-env-93295/editor_images/hiring_spot_0001_Layer-51.png\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -ms-interpolation-mode: bicubic; border: 0; display: block; outline: none; text-decoration: none; height: auto; width: 100%; font-size: 13px;\" width=\"300\"/>\n    \n        </a>\n      \n            </td>\n          </tr>\n        </tbody>\n      </table>\n    \n                </td>\n              </tr>\n            \n        </tbody>\n      </table>\n    \n            </td>\n          </tr>\n        </tbody>\n      </table>\n    \n      </div>\n    \n          <!--[if mso | IE]></td></tr></table><![endif]-->\n              </td>\n            </tr>\n          </tbody>\n        </table>\n        \n      </div>\n    \n      \n      <!--[if mso | IE]></td></tr></table><![endif]-->\n    \n    <!-- end Header section --><!-- First name personalization -->\n    \n    \n    <!-- end of First name personalization --><!-- Regular Text -->\n      \n      <!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"section-outlook\" role=\"presentation\" style=\"width:600px;\" width=\"600\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n    \n      \n      <div class=\"section\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; margin: 0px auto; max-width: 600px;\">\n        \n        <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; width: 100%;\" width=\"100%\">\n          <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n            <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n              <td style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; direction: ltr; font-size: 0px; padding: 0 60px 40px 60px; text-align: center;\" align=\"center\">\n                <!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:480px;\" ><![endif]-->\n            \n      <div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-size: 0px; text-align: left; direction: ltr; display: inline-block; vertical-align: top; width: 100%;\">\n        \n      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n        <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n          <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n            <td style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; vertical-align: top; padding: 0;\" valign=\"top\">\n              \n      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\" width=\"100%\">\n        <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n\n          <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n                <td align=\"left\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-size: 0px; padding: 0; padding-bottom: 20px; word-break: break-word;\">\n                  \n      <div style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-family: -apple-system, BlinkMacSystemFont, &#39;Avenir Next&#39;, Avenir, &#39;Helvetica Neue&#39;, Helvetica, Ubuntu, Roboto, Noto, &#39;Segoe ui&#39;, Arial, sans-serif; font-size: 24px; font-weight: 700; letter-spacing: -0.4px; line-height: 30px; text-align: left; color: #000000;\">Your first week in Notion</div>\n    \n                </td>\n              </tr>\n          \n              <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n                <td align=\"left\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-size: 0px; padding: 0; word-break: break-word;\">\n                  \n      <div style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-family: -apple-system, BlinkMacSystemFont, &#39;Avenir Next&#39;, Avenir, &#39;Helvetica Neue&#39;, Helvetica, Ubuntu, Roboto, Noto, &#39;Segoe ui&#39;, Arial, sans-serif; font-size: 16px; line-height: 24px; text-align: left; color: #000000;\">There&#39;s something satisfying about checking something off your to-do list. And you just finished your first week in Notion!<br style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-family: &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: 0.0172em; line-height: 23px; text-align: left; color: #000000;\"/><br style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-family: &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: 0.0172em; line-height: 23px; text-align: left; color: #000000;\"/>\nHere&#39;s how it went:<br/><br/><input type=\"checkbox\" id=\"0\" checked=\"\" disabled=\"\"/><label for=\"0\"> You created a connected workspace</label><br/>\n\n<input type=\"checkbox\" id=\"1\" checked=\"\" disabled=\"\"/><label for=\"1\"> You created your first page</label><br/>\n\n<input type=\"checkbox\" id=\"2\" disabled=\"\"/><label for=\"2\"> You invited more teammates</label><br/>\n\n<input type=\"checkbox\" id=\"3\" disabled=\"\"/><label for=\"3\"> You tried out Notion&#39;s desktop app</label><br/>\n\n<input type=\"checkbox\" id=\"4\" checked=\"\" disabled=\"\"/><label for=\"4\"> You tried out Notion&#39;s mobile app</label> <br/><br/>\n\n\n\n\n\nYou&#39;re almost there! Let&#39;s keep going.<br/><br/>\nHead back to your workspace and collaborate with your team on your docs, projects, and knowledge.</div>\n    \n                </td>\n              </tr>\n            \n        </tbody>\n      </table>\n    \n            </td>\n          </tr>\n        </tbody>\n      </table>\n    \n      </div>\n    \n          <!--[if mso | IE]></td></tr></table><![endif]-->\n              </td>\n            </tr>\n          </tbody>\n        </table>\n        \n      </div>\n    \n      \n      <!--[if mso | IE]></td></tr></table><![endif]-->\n    \n    <!-- end Regular Text --><!-- Button -->\n      \n      <!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"section-outlook\" role=\"presentation\" style=\"width:600px;\" width=\"600\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n    \n      \n      <div class=\"section\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; margin: 0px auto; max-width: 600px;\">\n        \n        <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; width: 100%;\" width=\"100%\">\n          <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n            <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n              <td style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; direction: ltr; font-size: 0px; padding: 0 60px 40px 60px; text-align: center;\" align=\"center\">\n                <!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:480px;\" ><![endif]-->\n            \n      <div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-size: 0px; text-align: left; direction: ltr; display: inline-block; vertical-align: top; width: 100%;\">\n        \n      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n        <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n          <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n            <td style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; vertical-align: top; padding: 0;\" valign=\"top\">\n              \n      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\" width=\"100%\">\n        <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n          \n              <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n                <td align=\"left\" vertical-align=\"middle\" class=\"float-center\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-size: 0px; padding: 0; word-break: break-word;\">\n                  \n      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; border-collapse: separate; line-height: 100%;\">\n        <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n          <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n            <td align=\"center\" bgcolor=\"#0984CF\" role=\"presentation\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; border: none; border-radius: 6px; cursor: auto; mso-padding-alt: 7px 15px; background: #0984CF;\" valign=\"middle\">\n              <a href=\"https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vbm90aW9uLnNvP3V0bV9jYW1wYWlnbj1Kb2luZXIrT25ib2FyZGluZysyMDI1XHUwMDI2dXRtX2NhbXBhaWduaWQ9NTI1XHUwMDI2dXRtX2NhbXBhaWdudHlwZT10cmFuc2FjdGlvbmFsXHUwMDI2dXRtX2NvbnRlbnQ9RW1haWwrOCstK2NoZWNrbGlzdFx1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiZWZkODA1YzkyY2NkNGRmZWUyY2U1MSIsImxpbmtfaWQiOjExM30/13cec3a19b6afe970536216c47026c085672cf800bc54d8e5d4ad38f4a51aeb7\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; display: inline-block; background: #0984CF; color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, &#39;Avenir Next&#39;, Avenir, &#39;Helvetica Neue&#39;, Helvetica, Ubuntu, Roboto, Noto, &#39;Segoe ui&#39;, Arial, sans-serif; font-size: 16px; font-weight: 500; line-height: 24px; letter-spacing: 0.02px; margin: 0; text-decoration: none; text-transform: none; padding: 7px 15px; mso-padding-alt: 0px; border-radius: 6px;\" target=\"_blank\">\n                Keep building\n              </a>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n    \n                </td>\n              </tr>\n            \n        </tbody>\n      </table>\n    \n            </td>\n          </tr>\n        </tbody>\n      </table>\n    \n      </div>\n    \n          <!--[if mso | IE]></td></tr></table><![endif]-->\n              </td>\n            </tr>\n          </tbody>\n        </table>\n        \n      </div>\n    \n      \n      <!--[if mso | IE]></td></tr></table><![endif]-->\n    \n    <!-- end of Button --><!-- Footer -->\n      \n      <!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"section-outlook\" role=\"presentation\" style=\"width:600px;\" width=\"600\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n    \n      \n      <div class=\"section\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; margin: 0px auto; max-width: 600px;\">\n        \n        <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; width: 100%;\" width=\"100%\">\n          <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n            <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n              <td style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; direction: ltr; font-size: 0px; padding: 0 60px 40px 60px; text-align: center;\" align=\"center\">\n                <!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:480px;\" ><![endif]-->\n            \n      <div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-size: 0px; text-align: left; direction: ltr; display: inline-block; vertical-align: top; width: 100%;\">\n        \n      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n        <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n          <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n            <td style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; vertical-align: top; padding: 0;\" valign=\"top\">\n              \n      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\" width=\"100%\">\n        <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n          \n              <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n                <td align=\"left\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-size: 0px; padding: 0; word-break: break-word;\">\n                  \n      <div style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-family: -apple-system, BlinkMacSystemFont, &#39;Avenir Next&#39;, Avenir, &#39;Helvetica Neue&#39;, Helvetica, Ubuntu, Roboto, Noto, &#39;Segoe ui&#39;, Arial, sans-serif; font-size: 16px; line-height: 24px; text-align: left; color: #000000;\">Thanks<br style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\"/>\n          The Notion Team</div>\n    \n                </td>\n              </tr>\n              \n            \n        </tbody>\n      </table>\n    \n            </td>\n          </tr>\n        </tbody>\n      </table>\n    \n      </div>\n    \n          <!--[if mso | IE]></td></tr></table><![endif]-->\n              </td>\n            </tr>\n          </tbody>\n        </table>\n        \n      </div>\n    \n      \n      <!--[if mso | IE]></td></tr></table><![endif]-->\n    \n    <!-- end of Footer -->\n      \n      <!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n    \n      \n      <div style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; margin: 0px auto; max-width: 600px;\">\n        \n        <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; width: 100%;\" width=\"100%\">\n          <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n            <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n              <td style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; direction: ltr; font-size: 0px; padding: 0; text-align: center;\" align=\"center\">\n                <!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:600px;\" ><![endif]-->\n            \n      <div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-size: 0px; text-align: left; direction: ltr; display: inline-block; vertical-align: top; width: 100%;\">\n        \n      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n        <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n          <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n            <td style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; vertical-align: top; padding: 0;\" valign=\"top\">\n              \n      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\" width=\"100%\">\n        <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n          \n              <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n                <td align=\"right\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-size: 0px; padding: 0; word-break: break-word;\">\n                  \n      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; border-collapse: collapse; border-spacing: 0px;\">\n        <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n          <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n            <td style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; width: 294px;\" width=\"294\">\n          <a href=\"https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5zby8_dXRtX2NhbXBhaWduPUpvaW5lcitPbmJvYXJkaW5nKzIwMjVcdTAwMjZ1dG1fY2FtcGFpZ25pZD01MjVcdTAwMjZ1dG1fY2FtcGFpZ250eXBlPXRyYW5zYWN0aW9uYWxcdTAwMjZ1dG1fY29udGVudD1FbWFpbCs4Ky0rY2hlY2tsaXN0XHUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiJlZmQ4MDVjOTJjY2Q0ZGZlZTJjZTUxIiwibGlua19pZCI6Mn0/fa70aa5569ffc57f582c3eea8d9f93344c919b06413b4d7925ac33ffa0116ae4\" target=\"_blank\">        \n      <img height=\"auto\" src=\"https://images.scalero.io/email_assets/3766/LTNA8VPNRTKPNESXW5C2ZB6R0BOKFBQZF6KDIPJ8JH8M5XS1KOOOGPZLBQT77I4X.png\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -ms-interpolation-mode: bicubic; border: 0; display: block; outline: none; text-decoration: none; height: auto; width: 100%; font-size: 13px;\" width=\"294\"/>\n    </a>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n    \n                </td>\n              </tr>\n            \n        </tbody>\n      </table>\n    \n            </td>\n          </tr>\n        </tbody>\n      </table>\n    \n      </div>\n    \n          <!--[if mso | IE]></td></tr></table><![endif]-->\n              </td>\n            </tr>\n          </tbody>\n        </table>\n        \n      </div>\n    \n      \n      <!--[if mso | IE]></td></tr></table><![endif]-->\n    \n    <!-- Signature -->\n    <!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"section-outlook\" role=\"presentation\" style=\"width:600px;\" width=\"600\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n    \n      \n      <div class=\"section\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; margin: 0px auto; max-width: 600px;\">\n        \n        <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; width: 100%;\" width=\"100%\">\n          <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n            <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n              <td style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; direction: ltr; font-size: 0px; padding: 0 60px 40px 60px; text-align: center;\" align=\"center\">\n                <!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:480px;\" ><![endif]-->\n            \n      <div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; font-size: 0px; text-align: left; direction: ltr; display: inline-block; vertical-align: top; width: 100%;\">\n        \n      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n        <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n          <tr style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n            <td style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; vertical-align: top; padding: 0; padding-top: 0px; padding-bottom: 70px;\" valign=\"top\">\n              \n      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;border-top:1px solid #9C9B98;\" width=\"100%\">\n        <tbody style=\"font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;; -webkit-font-feature-settings: &#39;pnum&#39;, &#39;nalt&#39;;\">\n            <tr style=\"\">\n                <td align=\"left\" style=\"font-size: 0px; padding: 0; padding-top: 25px; padding-bottom: 10px; word-break: break-word;\">\n                  \n      <div style=\"font-family: -apple-system, BlinkMacSystemFont, &#39;Avenir Next&#39;, Avenir, &#39;Helvetica Neue&#39;, Helvetica, Ubuntu, Roboto, Noto, &#39;Segoe ui&#39;, Arial, sans-serif; font-size: 12px; line-height: 18px; text-align: left; color: #1D1B16;letter-spacing:-0.4px;\">Write, plan, organize.<br/> In one AI-powered workspace.</div>\n    \n                </td>\n              </tr>\n            <tr>\n                <td>\n                  <table>\n                    <tbody><tr>\n                      <td>\n                        <a href=\"https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5zby8_dXRtX2NhbXBhaWduPUpvaW5lcitPbmJvYXJkaW5nKzIwMjVcdTAwMjZ1dG1fY2FtcGFpZ25pZD01MjVcdTAwMjZ1dG1fY2FtcGFpZ250eXBlPXRyYW5zYWN0aW9uYWxcdTAwMjZ1dG1fY29udGVudD1FbWFpbCs4Ky0rY2hlY2tsaXN0XHUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiJlZmQ4MDVjOTJjY2Q0ZGZlZTJjZTUxIiwibGlua19pZCI6Mn0/fa70aa5569ffc57f582c3eea8d9f93344c919b06413b4d7925ac33ffa0116ae4\" target=\"_blank\">\n                        <img alt=\"Notion\" height=\"auto\" src=\"https://userimg-assets.customeriomail.com/images/client-env-93295/1736257678190_notion-logo-small-supports-dark_01JH0GBB5PBAN054H9NQK4JNBX.png\" style=\"-ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; height: auto; width: 23px; font-size: 13px;padding-right:10px;\" width=\"23\"/>\n                        </a>\n                        <a href=\"https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5jb20vcHJvZHVjdC9tYWlsP3V0bV9jYW1wYWlnbj1Kb2luZXIrT25ib2FyZGluZysyMDI1XHUwMDI2dXRtX2NhbXBhaWduaWQ9NTI1XHUwMDI2dXRtX2NhbXBhaWdudHlwZT10cmFuc2FjdGlvbmFsXHUwMDI2dXRtX2NvbnRlbnQ9RW1haWwrOCstK2NoZWNrbGlzdFx1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiZWZkODA1YzkyY2NkNGRmZWUyY2U1MSIsImxpbmtfaWQiOjExOTUyfQ/82da23bc9d1ca9038ba168b674c067ab518f74f930ea129648c5eb3988b656d8\" target=\"_blank\">\n                        <img alt=\"Notion Mail\" valign=\"top\" height=\"auto\" src=\"https://userimg-assets.customeriomail.com/images/client-env-93295/1750781855794_Artboard%201_01JYHBP2GXG34X8GNZRVMEK20T.png\" style=\"-ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; height: auto; width: 21px; font-size: 13px;padding-right:10px;\" width=\"21\"/>\n                        </a>\n                        <a href=\"https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5jb20vcHJvZHVjdC9jYWxlbmRhcj91dG1fY2FtcGFpZ249Sm9pbmVyK09uYm9hcmRpbmcrMjAyNVx1MDAyNnV0bV9jYW1wYWlnbmlkPTUyNVx1MDAyNnV0bV9jYW1wYWlnbnR5cGU9dHJhbnNhY3Rpb25hbFx1MDAyNnV0bV9jb250ZW50PUVtYWlsKzgrLStjaGVja2xpc3RcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8iLCJpbnRlcm5hbCI6ImVmZDgwNWM5MmNjZDRkZmVlMmNlNTEiLCJsaW5rX2lkIjoxMTgxM30/318cbb2b619d3cf25ec4f88d930ad8b9c98338dbd6969cf55a787f0106b5f508\" target=\"_blank\">\n                        <img alt=\"Notion Calendar\" valign=\"top\" height=\"auto\" src=\"https://userimg-assets.customeriomail.com/images/client-env-93295/1750781867074_1750684712296_Notion-Calendar-Logo-2024.png%201_01JYEF1FECF5M9AG4AGGNWGYT0%20(2)_01JYHBPDF9FR87C75WEBKAPKF3.png\" style=\"-ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; height: auto; width: 23px; font-size: 13px;padding-right:10px;\" width=\"23\"/>\n                        </a><br/>\n                      </td>  \n                    </tr>\n                  </tbody></table>  \n                </td>\n              </tr>  \n              <tr style=\"\">\n                <td align=\"left\" style=\"font-size: 0px; padding: 0; padding-top: 11px; padding-bottom: 10px; word-break: break-word;\">\n                  \n      <div style=\"font-family: -apple-system, BlinkMacSystemFont, &#39;Avenir Next&#39;, Avenir, &#39;Helvetica Neue&#39;, Helvetica, Ubuntu, Roboto, Noto, &#39;Segoe ui&#39;, Arial, sans-serif; font-size: 12px; line-height: 18px; text-align: left; color: #9C9B98;letter-spacing:-0.4px;\">685 Market Street, San Francisco, CA 94105</div>\n    \n                </td>\n              </tr>\n            \n              <tr style=\"\">\n                <td align=\"left\" style=\"font-size: 0px; padding: 0; word-break: break-word;\">\n                  \n      <div style=\"font-family: -apple-system, BlinkMacSystemFont, &#39;Avenir Next&#39;, Avenir, &#39;Helvetica Neue&#39;, Helvetica, Ubuntu, Roboto, Noto, &#39;Segoe ui&#39;, Arial, sans-serif; font-size: 12px; line-height: 22px; text-align: left; color: #9C9B98;letter-spacing:-0.4px;\">Don&#39;t want this kind of email? Unsubscribe from <a href=\"https://e.customeriomail.com/unsubscribe/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==\" style=\"color: #9C9B98; text-decoration: none;border-bottom: 1px solid #9C9B98;display: inline-block;\">Product Updates and Releases</a>.<br/><a href=\"https://e.customeriomail.com/manage_subscription_preferences/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==\" style=\"color: #9C9B98; text-decoration: none;border-bottom: 1px solid #9C9B98;display: inline-block;\">Manage preferences</a> <a href=\"https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5zby9ub3Rpb24vUHJpdmFjeS1Qb2xpY3ktMzQ2OGQxMjBjZjYxNGQ0YzkwMTRjMDlmNmFkYzkwOTE_dXRtX2NhbXBhaWduPUpvaW5lcitPbmJvYXJkaW5nKzIwMjVcdTAwMjZ1dG1fY2FtcGFpZ25pZD01MjVcdTAwMjZ1dG1fY2FtcGFpZ250eXBlPXRyYW5zYWN0aW9uYWxcdTAwMjZ1dG1fY29udGVudD1FbWFpbCs4Ky0rY2hlY2tsaXN0XHUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiJlZmQ4MDVjOTJjY2Q0ZGZlZTJjZTUxIiwibGlua19pZCI6MTMwMzR9/495bb4a4977d2cda045b83515a3c4f804744aaae820112deac3a20621b76b4e7\" style=\"color: #9C9B98; text-decoration: none;border-bottom: 1px solid #9C9B98;display: inline-block;\">Privacy Policy</a> <a href=\"https://e.customeriomail.com/deliveries/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==\" style=\"color: #9C9B98; text-decoration: none;border-bottom: 1px solid #9C9B98;display: inline-block;\">View in browser</a></div>\n    \n                </td>\n              </tr>\n            \n        </tbody>\n      </table>\n    \n            </td>\n          </tr>\n        </tbody>\n      </table>\n    \n      </div>\n    \n          <!--[if mso | IE]></td></tr></table><![endif]-->\n              </td>\n            </tr>\n          </tbody>\n        </table>\n        \n      </div>\n    \n      \n      <!--[if mso | IE]></td></tr></table><![endif]-->\n    <!-- End of signature -->\n      </div>\n    \n      \n    \n  <img src=\"https://e.customeriomail.com/e/o/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09In0=\" style=\"height: 1px !important; max-height: 1px !important; max-width: 1px !important; width: 1px !important; display: none !important;\" alt=\"\"/></body></html>"
+    },
+    "attachments": []
+  },
+  "header_analysis": {
+    "spf_result": "pass",
+    "dkim_result": "pass",
+    "dmarc_result": "pass",
+    "sender_domain": "mail.notion.so",
+    "reply_to_domain": "",
+    "received_chain": [
+      {
+        "from_ip": "130.211.229.195",
+        "by_domain": "",
+        "with_protocol": "smtp",
+        "timestamp": ""
+      }
+    ],
+    "x_headers": {
+      "X-Mailer": "Customer.io (dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==; +https://whatis.customeriomail.com)"
+    },
+    "authentication_results": {
+      "spf": "pass",
+      "dkim": "pass",
+      "dmarc": "pass"
+    },
+    "message_id_analysis": {
+      "message_id": "",
+      "domain_match": true
+    },
+    "header_inconsistencies": [
+      "Missing important header: Message-ID",
+      "Suspicious X-Header found: X-Mailer = Customer.io (dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==; +https://whatis.customeriomail.com)"
+    ],
+    "free_email_service": {
+      "is_free_email": false,
+      "domain": "mail.notion.so",
+      "warning": null
+    },
+    "domain_misspelling": {
+      "is_misspelled": false,
+      "original_domain": "mail.notion.so",
+      "suspicious_domain": null,
+      "potential_targets": []
+    },
+    "domain_age_info": {
+      "domain": "mail.notion.so",
+      "is_new_domain": null,
+      "registration_date": null,
+      "age_days": null
+    },
+    "send_time_analysis": {
+      "send_time": "2025-08-08T07:01:05+00:00",
+      "is_unusual_time": true,
+      "warning": "Email sent outside business hours: 7:00"
+    }
+  },
+  "content_analysis": {
+    "urls": [
+      {
+        "url": "http://track.customer.io/deliveries/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==",
+        "domain": "track.customer.io",
+        "registered_domain": "customer.io",
+        "path": "/deliveries/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5jb20vcHJvZHVjdC9tYWlsP3V0bV9jYW1wYWlnbj1Kb2luZXIrT25ib2FyZGluZysyMDI1XHUwMDI2dXRtX2NhbXBhaWduaWQ9NTI1XHUwMDI2dXRtX2NhbXBhaWdudHlwZT10cmFuc2FjdGlvbmFsXHUwMDI2dXRtX2NvbnRlbnQ9RW1haWwrOCstK2NoZWNrbGlzdFx1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiZWZkODA1YzkyY2NkNGRmZWUyY2U1MSIsImxpbmtfaWQiOjExOTUyfQ/82da23bc9d1ca9038ba168b674c067ab518f74f930ea129648c5eb3988b656d8",
+        "domain": "e.customeriomail.com",
+        "registered_domain": "customeriomail.com",
+        "path": "/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5jb20vcHJvZHVjdC9tYWlsP3V0bV9jYW1wYWlnbj1Kb2luZXIrT25ib2FyZGluZysyMDI1XHUwMDI2dXRtX2NhbXBhaWduaWQ9NTI1XHUwMDI2dXRtX2NhbXBhaWdudHlwZT10cmFuc2FjdGlvbmFsXHUwMDI2dXRtX2NvbnRlbnQ9RW1haWwrOCstK2NoZWNrbGlzdFx1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiZWZkODA1YzkyY2NkNGRmZWUyY2U1MSIsImxpbmtfaWQiOjExOTUyfQ/82da23bc9d1ca9038ba168b674c067ab518f74f930ea129648c5eb3988b656d8",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://notion.so?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io",
+        "domain": "notion.so",
+        "registered_domain": "notion.so",
+        "path": "",
+        "query": "utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 0
+      },
+      {
+        "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vbm90aW9uLnNvLz91dG1fY2FtcGFpZ249Sm9pbmVyK09uYm9hcmRpbmcrMjAyNVx1MDAyNnV0bV9jYW1wYWlnbmlkPTUyNVx1MDAyNnV0bV9jYW1wYWlnbnR5cGU9dHJhbnNhY3Rpb25hbFx1MDAyNnV0bV9jb250ZW50PUVtYWlsKzgrLStjaGVja2xpc3RcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8iLCJpbnRlcm5hbCI6ImVmZDgwNWM5MmNjZDRkZmVlMmNlNTEiLCJsaW5rX2lkIjoxOTU1fQ/5be61f01c38d012d2602db82bd7801ea76b630c0cb0fd63f9e35ef29166f09cb",
+        "domain": "e.customeriomail.com",
+        "registered_domain": "customeriomail.com",
+        "path": "/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vbm90aW9uLnNvLz91dG1fY2FtcGFpZ249Sm9pbmVyK09uYm9hcmRpbmcrMjAyNVx1MDAyNnV0bV9jYW1wYWlnbmlkPTUyNVx1MDAyNnV0bV9jYW1wYWlnbnR5cGU9dHJhbnNhY3Rpb25hbFx1MDAyNnV0bV9jb250ZW50PUVtYWlsKzgrLStjaGVja2xpc3RcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8iLCJpbnRlcm5hbCI6ImVmZDgwNWM5MmNjZDRkZmVlMmNlNTEiLCJsaW5rX2lkIjoxOTU1fQ/5be61f01c38d012d2602db82bd7801ea76b630c0cb0fd63f9e35ef29166f09cb",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://e.customeriomail.com/deliveries/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==",
+        "domain": "e.customeriomail.com",
+        "registered_domain": "customeriomail.com",
+        "path": "/deliveries/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://userimg-assets.customeriomail.com/images/client-env-93295/1750781867074_1750684712296_Notion-Calendar-Logo-2024.png%201_01JYEF1FECF5M9AG4AGGNWGYT0%20(2)_01JYHBPDF9FR87C75WEBKAPKF3.png",
+        "domain": "userimg-assets.customeriomail.com",
+        "registered_domain": "customeriomail.com",
+        "path": "/images/client-env-93295/1750781867074_1750684712296_Notion-Calendar-Logo-2024.png%201_01JYEF1FECF5M9AG4AGGNWGYT0%20(2)_01JYHBPDF9FR87C75WEBKAPKF3.png",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://images.scalero.io/email_assets/3766/9G4X95BQXWZ97Y4SMTOY3K2LWDZZ03CWX904KK6B9RXN8NT5KXDNZ2JKZF5QYHU3.png",
+        "domain": "images.scalero.io",
+        "registered_domain": "scalero.io",
+        "path": "/email_assets/3766/9G4X95BQXWZ97Y4SMTOY3K2LWDZZ03CWX904KK6B9RXN8NT5KXDNZ2JKZF5QYHU3.png",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://userimg-assets.customeriomail.com/images/client-env-93295/1736257678190_notion-logo-small-supports-dark_01JH0GBB5PBAN054H9NQK4JNBX.png",
+        "domain": "userimg-assets.customeriomail.com",
+        "registered_domain": "customeriomail.com",
+        "path": "/images/client-env-93295/1736257678190_notion-logo-small-supports-dark_01JH0GBB5PBAN054H9NQK4JNBX.png",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://e.customeriomail.com/manage_subscription_preferences/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==",
+        "domain": "e.customeriomail.com",
+        "registered_domain": "customeriomail.com",
+        "path": "/manage_subscription_preferences/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "http://track.customer.io/unsubscribe/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==",
+        "domain": "track.customer.io",
+        "registered_domain": "customer.io",
+        "path": "/unsubscribe/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vbm90aW9uLnNvP3V0bV9jYW1wYWlnbj1Kb2luZXIrT25ib2FyZGluZysyMDI1XHUwMDI2dXRtX2NhbXBhaWduaWQ9NTI1XHUwMDI2dXRtX2NhbXBhaWdudHlwZT10cmFuc2FjdGlvbmFsXHUwMDI2dXRtX2NvbnRlbnQ9RW1haWwrOCstK2NoZWNrbGlzdFx1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiZWZkODA1YzkyY2NkNGRmZWUyY2U1MSIsImxpbmtfaWQiOjExM30/13cec3a19b6afe970536216c47026c085672cf800bc54d8e5d4ad38f4a51aeb7",
+        "domain": "e.customeriomail.com",
+        "registered_domain": "customeriomail.com",
+        "path": "/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vbm90aW9uLnNvP3V0bV9jYW1wYWlnbj1Kb2luZXIrT25ib2FyZGluZysyMDI1XHUwMDI2dXRtX2NhbXBhaWduaWQ9NTI1XHUwMDI2dXRtX2NhbXBhaWdudHlwZT10cmFuc2FjdGlvbmFsXHUwMDI2dXRtX2NvbnRlbnQ9RW1haWwrOCstK2NoZWNrbGlzdFx1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiZWZkODA1YzkyY2NkNGRmZWUyY2U1MSIsImxpbmtfaWQiOjExM30/13cec3a19b6afe970536216c47026c085672cf800bc54d8e5d4ad38f4a51aeb7",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://e.customeriomail.com/unsubscribe/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==",
+        "domain": "e.customeriomail.com",
+        "registered_domain": "customeriomail.com",
+        "path": "/unsubscribe/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5zby8_dXRtX2NhbXBhaWduPUpvaW5lcitPbmJvYXJkaW5nKzIwMjVcdTAwMjZ1dG1fY2FtcGFpZ25pZD01MjVcdTAwMjZ1dG1fY2FtcGFpZ250eXBlPXRyYW5zYWN0aW9uYWxcdTAwMjZ1dG1fY29udGVudD1FbWFpbCs4Ky0rY2hlY2tsaXN0XHUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiJlZmQ4MDVjOTJjY2Q0ZGZlZTJjZTUxIiwibGlua19pZCI6Mn0/fa70aa5569ffc57f582c3eea8d9f93344c919b06413b4d7925ac33ffa0116ae4",
+        "domain": "e.customeriomail.com",
+        "registered_domain": "customeriomail.com",
+        "path": "/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5zby8_dXRtX2NhbXBhaWduPUpvaW5lcitPbmJvYXJkaW5nKzIwMjVcdTAwMjZ1dG1fY2FtcGFpZ25pZD01MjVcdTAwMjZ1dG1fY2FtcGFpZ250eXBlPXRyYW5zYWN0aW9uYWxcdTAwMjZ1dG1fY29udGVudD1FbWFpbCs4Ky0rY2hlY2tsaXN0XHUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiJlZmQ4MDVjOTJjY2Q0ZGZlZTJjZTUxIiwibGlua19pZCI6Mn0/fa70aa5569ffc57f582c3eea8d9f93344c919b06413b4d7925ac33ffa0116ae4",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://www.notion.so/notion/Privacy-Policy-3468d120cf614d4c9014c09f6adc9091?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io",
+        "domain": "www.notion.so",
+        "registered_domain": "notion.so",
+        "path": "/notion/Privacy-Policy-3468d120cf614d4c9014c09f6adc9091",
+        "query": "utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://www.notion.com/product/mail?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io",
+        "domain": "www.notion.com",
+        "registered_domain": "notion.com",
+        "path": "/product/mail",
+        "query": "utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://images.scalero.io/email_assets/3766/LTNA8VPNRTKPNESXW5C2ZB6R0BOKFBQZF6KDIPJ8JH8M5XS1KOOOGPZLBQT77I4X.png",
+        "domain": "images.scalero.io",
+        "registered_domain": "scalero.io",
+        "path": "/email_assets/3766/LTNA8VPNRTKPNESXW5C2ZB6R0BOKFBQZF6KDIPJ8JH8M5XS1KOOOGPZLBQT77I4X.png",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://e.customeriomail.com/e/o/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09In0=",
+        "domain": "e.customeriomail.com",
+        "registered_domain": "customeriomail.com",
+        "path": "/e/o/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09In0=",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://userimg-bee.customeriomail.com/images/client-env-93295/editor_images/hiring_spot_0001_Layer-51.png",
+        "domain": "userimg-bee.customeriomail.com",
+        "registered_domain": "customeriomail.com",
+        "path": "/images/client-env-93295/editor_images/hiring_spot_0001_Layer-51.png",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5jb20vcHJvZHVjdC9jYWxlbmRhcj91dG1fY2FtcGFpZ249Sm9pbmVyK09uYm9hcmRpbmcrMjAyNVx1MDAyNnV0bV9jYW1wYWlnbmlkPTUyNVx1MDAyNnV0bV9jYW1wYWlnbnR5cGU9dHJhbnNhY3Rpb25hbFx1MDAyNnV0bV9jb250ZW50PUVtYWlsKzgrLStjaGVja2xpc3RcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8iLCJpbnRlcm5hbCI6ImVmZDgwNWM5MmNjZDRkZmVlMmNlNTEiLCJsaW5rX2lkIjoxMTgxM30/318cbb2b619d3cf25ec4f88d930ad8b9c98338dbd6969cf55a787f0106b5f508",
+        "domain": "e.customeriomail.com",
+        "registered_domain": "customeriomail.com",
+        "path": "/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5jb20vcHJvZHVjdC9jYWxlbmRhcj91dG1fY2FtcGFpZ249Sm9pbmVyK09uYm9hcmRpbmcrMjAyNVx1MDAyNnV0bV9jYW1wYWlnbmlkPTUyNVx1MDAyNnV0bV9jYW1wYWlnbnR5cGU9dHJhbnNhY3Rpb25hbFx1MDAyNnV0bV9jb250ZW50PUVtYWlsKzgrLStjaGVja2xpc3RcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8iLCJpbnRlcm5hbCI6ImVmZDgwNWM5MmNjZDRkZmVlMmNlNTEiLCJsaW5rX2lkIjoxMTgxM30/318cbb2b619d3cf25ec4f88d930ad8b9c98338dbd6969cf55a787f0106b5f508",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "http://track.customer.io/manage_subscription_preferences/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==",
+        "domain": "track.customer.io",
+        "registered_domain": "customer.io",
+        "path": "/manage_subscription_preferences/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://www.notion.so/?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io",
+        "domain": "www.notion.so",
+        "registered_domain": "notion.so",
+        "path": "/",
+        "query": "utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://userimg-assets.customeriomail.com/images/client-env-93295/1750781855794_Artboard%201_01JYHBP2GXG34X8GNZRVMEK20T.png",
+        "domain": "userimg-assets.customeriomail.com",
+        "registered_domain": "customeriomail.com",
+        "path": "/images/client-env-93295/1750781855794_Artboard%201_01JYHBP2GXG34X8GNZRVMEK20T.png",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://notion.so/?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io",
+        "domain": "notion.so",
+        "registered_domain": "notion.so",
+        "path": "/",
+        "query": "utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 0
+      },
+      {
+        "url": "https://www.notion.com/product/calendar?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io",
+        "domain": "www.notion.com",
+        "registered_domain": "notion.com",
+        "path": "/product/calendar",
+        "query": "utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      },
+      {
+        "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5zby9ub3Rpb24vUHJpdmFjeS1Qb2xpY3ktMzQ2OGQxMjBjZjYxNGQ0YzkwMTRjMDlmNmFkYzkwOTE_dXRtX2NhbXBhaWduPUpvaW5lcitPbmJvYXJkaW5nKzIwMjVcdTAwMjZ1dG1fY2FtcGFpZ25pZD01MjVcdTAwMjZ1dG1fY2FtcGFpZ250eXBlPXRyYW5zYWN0aW9uYWxcdTAwMjZ1dG1fY29udGVudD1FbWFpbCs4Ky0rY2hlY2tsaXN0XHUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiJlZmQ4MDVjOTJjY2Q0ZGZlZTJjZTUxIiwibGlua19pZCI6MTMwMzR9/495bb4a4977d2cda045b83515a3c4f804744aaae820112deac3a20621b76b4e7",
+        "domain": "e.customeriomail.com",
+        "registered_domain": "customeriomail.com",
+        "path": "/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5zby9ub3Rpb24vUHJpdmFjeS1Qb2xpY3ktMzQ2OGQxMjBjZjYxNGQ0YzkwMTRjMDlmNmFkYzkwOTE_dXRtX2NhbXBhaWduPUpvaW5lcitPbmJvYXJkaW5nKzIwMjVcdTAwMjZ1dG1fY2FtcGFpZ25pZD01MjVcdTAwMjZ1dG1fY2FtcGFpZ250eXBlPXRyYW5zYWN0aW9uYWxcdTAwMjZ1dG1fY29udGVudD1FbWFpbCs4Ky0rY2hlY2tsaXN0XHUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiJlZmQ4MDVjOTJjY2Q0ZGZlZTJjZTUxIiwibGlua19pZCI6MTMwMzR9/495bb4a4977d2cda045b83515a3c4f804744aaae820112deac3a20621b76b4e7",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 1
+      }
+    ],
+    "suspicious_keywords": [],
+    "language_analysis": {
+      "has_grammar_errors": false,
+      "has_urgent_language": false,
+      "has_unicode_homoglyphs": false,
+      "readability_score": 0,
+      "language_mismatch": {
+        "language_detected": "en",
+        "potential_mismatch": false,
+        "warning": null
+      }
+    },
+    "formatting_analysis": {
+      "hidden_elements": [
+        {
+          "tag": "div",
+          "content": "First week in Notion.  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌..."
+        },
+        {
+          "tag": "img",
+          "content": ""
+        }
+      ],
+      "link_text_mismatch": [],
+      "suspicious_forms": [],
+      "external_resources": [
+        {
+          "tag": "img",
+          "src": "https://images.scalero.io/email_assets/3766/9G4X95BQXWZ97Y4SMTOY3K2LWDZZ03CWX904KK6B9RXN8NT5KXDNZ2JKZF5QYHU3.png"
+        },
+        {
+          "tag": "img",
+          "src": "https://userimg-bee.customeriomail.com/images/client-env-93295/editor_images/hiring_spot_0001_Layer-51.png"
+        },
+        {
+          "tag": "img",
+          "src": "https://images.scalero.io/email_assets/3766/LTNA8VPNRTKPNESXW5C2ZB6R0BOKFBQZF6KDIPJ8JH8M5XS1KOOOGPZLBQT77I4X.png"
+        },
+        {
+          "tag": "img",
+          "src": "https://userimg-assets.customeriomail.com/images/client-env-93295/1736257678190_notion-logo-small-supports-dark_01JH0GBB5PBAN054H9NQK4JNBX.png"
+        },
+        {
+          "tag": "img",
+          "src": "https://userimg-assets.customeriomail.com/images/client-env-93295/1750781855794_Artboard%201_01JYHBP2GXG34X8GNZRVMEK20T.png"
+        },
+        {
+          "tag": "img",
+          "src": "https://userimg-assets.customeriomail.com/images/client-env-93295/1750781867074_1750684712296_Notion-Calendar-Logo-2024.png%201_01JYEF1FECF5M9AG4AGGNWGYT0%20(2)_01JYHBPDF9FR87C75WEBKAPKF3.png"
+        },
+        {
+          "tag": "img",
+          "src": "https://e.customeriomail.com/e/o/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09In0="
+        }
+      ]
+    },
+    "domain_mismatch": [
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "customer.io",
+        "url": "http://track.customer.io/deliveries/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw=="
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "customeriomail.com",
+        "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5jb20vcHJvZHVjdC9tYWlsP3V0bV9jYW1wYWlnbj1Kb2luZXIrT25ib2FyZGluZysyMDI1XHUwMDI2dXRtX2NhbXBhaWduaWQ9NTI1XHUwMDI2dXRtX2NhbXBhaWdudHlwZT10cmFuc2FjdGlvbmFsXHUwMDI2dXRtX2NvbnRlbnQ9RW1haWwrOCstK2NoZWNrbGlzdFx1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiZWZkODA1YzkyY2NkNGRmZWUyY2U1MSIsImxpbmtfaWQiOjExOTUyfQ/82da23bc9d1ca9038ba168b674c067ab518f74f930ea129648c5eb3988b656d8"
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "notion.so",
+        "url": "https://notion.so?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io"
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "customeriomail.com",
+        "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vbm90aW9uLnNvLz91dG1fY2FtcGFpZ249Sm9pbmVyK09uYm9hcmRpbmcrMjAyNVx1MDAyNnV0bV9jYW1wYWlnbmlkPTUyNVx1MDAyNnV0bV9jYW1wYWlnbnR5cGU9dHJhbnNhY3Rpb25hbFx1MDAyNnV0bV9jb250ZW50PUVtYWlsKzgrLStjaGVja2xpc3RcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8iLCJpbnRlcm5hbCI6ImVmZDgwNWM5MmNjZDRkZmVlMmNlNTEiLCJsaW5rX2lkIjoxOTU1fQ/5be61f01c38d012d2602db82bd7801ea76b630c0cb0fd63f9e35ef29166f09cb"
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "customeriomail.com",
+        "url": "https://e.customeriomail.com/deliveries/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw=="
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "customeriomail.com",
+        "url": "https://userimg-assets.customeriomail.com/images/client-env-93295/1750781867074_1750684712296_Notion-Calendar-Logo-2024.png%201_01JYEF1FECF5M9AG4AGGNWGYT0%20(2)_01JYHBPDF9FR87C75WEBKAPKF3.png"
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "scalero.io",
+        "url": "https://images.scalero.io/email_assets/3766/9G4X95BQXWZ97Y4SMTOY3K2LWDZZ03CWX904KK6B9RXN8NT5KXDNZ2JKZF5QYHU3.png"
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "customeriomail.com",
+        "url": "https://userimg-assets.customeriomail.com/images/client-env-93295/1736257678190_notion-logo-small-supports-dark_01JH0GBB5PBAN054H9NQK4JNBX.png"
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "customeriomail.com",
+        "url": "https://e.customeriomail.com/manage_subscription_preferences/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw=="
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "customer.io",
+        "url": "http://track.customer.io/unsubscribe/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw=="
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "customeriomail.com",
+        "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vbm90aW9uLnNvP3V0bV9jYW1wYWlnbj1Kb2luZXIrT25ib2FyZGluZysyMDI1XHUwMDI2dXRtX2NhbXBhaWduaWQ9NTI1XHUwMDI2dXRtX2NhbXBhaWdudHlwZT10cmFuc2FjdGlvbmFsXHUwMDI2dXRtX2NvbnRlbnQ9RW1haWwrOCstK2NoZWNrbGlzdFx1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiZWZkODA1YzkyY2NkNGRmZWUyY2U1MSIsImxpbmtfaWQiOjExM30/13cec3a19b6afe970536216c47026c085672cf800bc54d8e5d4ad38f4a51aeb7"
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "customeriomail.com",
+        "url": "https://e.customeriomail.com/unsubscribe/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw=="
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "customeriomail.com",
+        "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5zby8_dXRtX2NhbXBhaWduPUpvaW5lcitPbmJvYXJkaW5nKzIwMjVcdTAwMjZ1dG1fY2FtcGFpZ25pZD01MjVcdTAwMjZ1dG1fY2FtcGFpZ250eXBlPXRyYW5zYWN0aW9uYWxcdTAwMjZ1dG1fY29udGVudD1FbWFpbCs4Ky0rY2hlY2tsaXN0XHUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiJlZmQ4MDVjOTJjY2Q0ZGZlZTJjZTUxIiwibGlua19pZCI6Mn0/fa70aa5569ffc57f582c3eea8d9f93344c919b06413b4d7925ac33ffa0116ae4"
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "notion.so",
+        "url": "https://www.notion.so/notion/Privacy-Policy-3468d120cf614d4c9014c09f6adc9091?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io"
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "notion.com",
+        "url": "https://www.notion.com/product/mail?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io"
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "scalero.io",
+        "url": "https://images.scalero.io/email_assets/3766/LTNA8VPNRTKPNESXW5C2ZB6R0BOKFBQZF6KDIPJ8JH8M5XS1KOOOGPZLBQT77I4X.png"
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "customeriomail.com",
+        "url": "https://e.customeriomail.com/e/o/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09In0="
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "customeriomail.com",
+        "url": "https://userimg-bee.customeriomail.com/images/client-env-93295/editor_images/hiring_spot_0001_Layer-51.png"
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "customeriomail.com",
+        "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5jb20vcHJvZHVjdC9jYWxlbmRhcj91dG1fY2FtcGFpZ249Sm9pbmVyK09uYm9hcmRpbmcrMjAyNVx1MDAyNnV0bV9jYW1wYWlnbmlkPTUyNVx1MDAyNnV0bV9jYW1wYWlnbnR5cGU9dHJhbnNhY3Rpb25hbFx1MDAyNnV0bV9jb250ZW50PUVtYWlsKzgrLStjaGVja2xpc3RcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8iLCJpbnRlcm5hbCI6ImVmZDgwNWM5MmNjZDRkZmVlMmNlNTEiLCJsaW5rX2lkIjoxMTgxM30/318cbb2b619d3cf25ec4f88d930ad8b9c98338dbd6969cf55a787f0106b5f508"
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "customer.io",
+        "url": "http://track.customer.io/manage_subscription_preferences/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw=="
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "notion.so",
+        "url": "https://www.notion.so/?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io"
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "customeriomail.com",
+        "url": "https://userimg-assets.customeriomail.com/images/client-env-93295/1750781855794_Artboard%201_01JYHBP2GXG34X8GNZRVMEK20T.png"
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "notion.so",
+        "url": "https://notion.so/?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io"
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "notion.com",
+        "url": "https://www.notion.com/product/calendar?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io"
+      },
+      {
+        "sender_domain": "mail.notion.so",
+        "url_domain": "customeriomail.com",
+        "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5zby9ub3Rpb24vUHJpdmFjeS1Qb2xpY3ktMzQ2OGQxMjBjZjYxNGQ0YzkwMTRjMDlmNmFkYzkwOTE_dXRtX2NhbXBhaWduPUpvaW5lcitPbmJvYXJkaW5nKzIwMjVcdTAwMjZ1dG1fY2FtcGFpZ25pZD01MjVcdTAwMjZ1dG1fY2FtcGFpZ250eXBlPXRyYW5zYWN0aW9uYWxcdTAwMjZ1dG1fY29udGVudD1FbWFpbCs4Ky0rY2hlY2tsaXN0XHUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiJlZmQ4MDVjOTJjY2Q0ZGZlZTJjZTUxIiwibGlua19pZCI6MTMwMzR9/495bb4a4977d2cda045b83515a3c4f804744aaae820112deac3a20621b76b4e7"
+      }
+    ],
+    "hidden_text": [
+      "Tiny font size: Your first week in NotionThere's something satisfy...",
+      "Tiny font size: Your first week in NotionThere's something satisfy...",
+      "Tiny font size: Your first week in Notion...",
+      "Tiny font size: There's something satisfying about checking someth...",
+      "Tiny font size: Keep building...",
+      "Tiny font size: Keep building...",
+      "Tiny font size: Keep building...",
+      "Tiny font size: ThanksThe Notion Team...",
+      "Tiny font size: ThanksThe Notion Team...",
+      "Tiny font size: ThanksThe Notion Team...",
+      "Tiny font size: Write, plan, organize.In one AI-powered workspace....",
+      "Tiny font size: Write, plan, organize.In one AI-powered workspace....",
+      "Tiny font size: Write, plan, organize.In one AI-powered workspace....",
+      "Tiny font size: 685 Market Street, San Francisco, CA 94105...",
+      "Tiny font size: Don't want this kind of email? Unsubscribe fromPro..."
+    ],
+    "subject_analysis": {
+      "urgency_detected": false,
+      "too_good_detected": false,
+      "fake_alert_detected": false,
+      "keywords_found": []
+    },
+    "greeting_analysis": {
+      "is_generic": false,
+      "greeting_found": null,
+      "is_personalized": false
+    },
+    "sensitive_info_requests": {
+      "sensitive_request_detected": false,
+      "keywords_found": [],
+      "context_examples": []
+    },
+    "base64_content": {
+      "base64_detected": true,
+      "encoded_blocks": [
+        "campaign=Joiner+Onboarding+2025",
+        "campaigntype=transactional",
+        "campaign=Joiner+Onboarding+2025",
+        "campaigntype=transactional",
+        "campaign=Joiner+Onboarding+2025",
+        "campaigntype=transactional",
+        "campaign=Joiner+Onboarding+2025",
+        "campaigntype=transactional",
+        "campaign=Joiner+Onboarding+2025",
+        "campaigntype=transactional",
+        "campaign=Joiner+Onboarding+2025",
+        "campaigntype=transactional",
+        "com/product/calendar",
+        "campaign=Joiner+Onboarding+2025",
+        "campaigntype=transactional",
+        "io/unsubscribe/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA",
+        "preferences/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA",
+        "3468d120cf614d4c9014c09f6adc9091",
+        "campaign=Joiner+Onboarding+2025",
+        "campaigntype=transactional",
+        "io/deliveries/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA",
+        "com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0...",
+        "dXRtX2NhbXBhaWduPUpvaW5lcitPbmJvYXJkaW5nKzIwMjVcdTAwMjZ1dG1fY2FtcGFpZ25pZD01MjVcdTAwMjZ1dG1fY2FtcGFp...",
+        "assets/3766/9G4X95BQXWZ97Y4SMTOY3K2LWDZZ03CWX904KK6B9RXN8NT5KXDNZ2JKZF5QYHU3",
+        "com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0...",
+        "com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0...",
+        "com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0...",
+        "dXRtX2NhbXBhaWduPUpvaW5lcitPbmJvYXJkaW5nKzIwMjVcdTAwMjZ1dG1fY2FtcGFpZ25pZD01MjVcdTAwMjZ1dG1fY2FtcGFp...",
+        "assets/3766/LTNA8VPNRTKPNESXW5C2ZB6R0BOKFBQZF6KDIPJ8JH8M5XS1KOOOGPZLBQT77I4X",
+        "com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0...",
+        "dXRtX2NhbXBhaWduPUpvaW5lcitPbmJvYXJkaW5nKzIwMjVcdTAwMjZ1dG1fY2FtcGFpZ25pZD01MjVcdTAwMjZ1dG1fY2FtcGFp...",
+        "01JH0GBB5PBAN054H9NQK4JNBX",
+        "com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0...",
+        "01JYHBP2GXG34X8GNZRVMEK20T",
+        "com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0...",
+        "01JYEF1FECF5M9AG4AGGNWGYT0",
+        "01JYHBPDF9FR87C75WEBKAPKF3",
+        "com/unsubscribe/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA",
+        "preferences/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA",
+        "com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0...",
+        "dXRtX2NhbXBhaWduPUpvaW5lcitPbmJvYXJkaW5nKzIwMjVcdTAwMjZ1dG1fY2FtcGFpZ25pZD01MjVcdTAwMjZ1dG1fY2FtcGFp...",
+        "com/deliveries/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA",
+        "com/e/o/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09In0="
+      ]
+    },
+    "embedded_forms": {
+      "embedded_forms_detected": false,
+      "form_details": []
+    },
+    "tracking_pixels": {
+      "tracking_pixels_detected": false,
+      "pixel_details": []
+    }
+  },
+  "attachment_analysis": {
+    "attachments": [],
+    "total_count": 0,
+    "malicious_count": 0,
+    "suspicious_count": 0,
+    "password_protected_count": 0,
+    "invoice_attachment_count": 0
+  },
+  "threat_intel": {
+    "ips": {
+      "130.211.229.195": {
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "harmless": 0,
+          "undetected": 94
+        },
+        "abuseipdb": {
+          "abuse_confidence_score": 0,
+          "total_reports": 0,
+          "country": "US",
+          "isp": "Google LLC",
+          "usage_type": "Data Center/Web Hosting/Transit"
+        },
+        "greynoise": {
+          "error": "API error: 404"
+        },
+        "geoip": {
+          "country": "United States",
+          "region": "Iowa",
+          "city": "Council Bluffs",
+          "zip": "",
+          "lat": 41.2619,
+          "lon": -95.8608,
+          "isp": "Google LLC",
+          "org": "Google Cloud (us-central1)",
+          "as": "AS396982 Google LLC"
+        }
+      }
+    },
+    "urls": {
+      "http://track.customer.io/deliveries/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5jb20vcHJvZHVjdC9tYWlsP3V0bV9jYW1wYWlnbj1Kb2luZXIrT25ib2FyZGluZysyMDI1XHUwMDI2dXRtX2NhbXBhaWduaWQ9NTI1XHUwMDI2dXRtX2NhbXBhaWdudHlwZT10cmFuc2FjdGlvbmFsXHUwMDI2dXRtX2NvbnRlbnQ9RW1haWwrOCstK2NoZWNrbGlzdFx1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiZWZkODA1YzkyY2NkNGRmZWUyY2U1MSIsImxpbmtfaWQiOjExOTUyfQ/82da23bc9d1ca9038ba168b674c067ab518f74f930ea129648c5eb3988b656d8": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://notion.so?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vbm90aW9uLnNvLz91dG1fY2FtcGFpZ249Sm9pbmVyK09uYm9hcmRpbmcrMjAyNVx1MDAyNnV0bV9jYW1wYWlnbmlkPTUyNVx1MDAyNnV0bV9jYW1wYWlnbnR5cGU9dHJhbnNhY3Rpb25hbFx1MDAyNnV0bV9jb250ZW50PUVtYWlsKzgrLStjaGVja2xpc3RcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8iLCJpbnRlcm5hbCI6ImVmZDgwNWM5MmNjZDRkZmVlMmNlNTEiLCJsaW5rX2lkIjoxOTU1fQ/5be61f01c38d012d2602db82bd7801ea76b630c0cb0fd63f9e35ef29166f09cb": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://e.customeriomail.com/deliveries/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://userimg-assets.customeriomail.com/images/client-env-93295/1750781867074_1750684712296_Notion-Calendar-Logo-2024.png%201_01JYEF1FECF5M9AG4AGGNWGYT0%20(2)_01JYHBPDF9FR87C75WEBKAPKF3.png": {
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "harmless": 68,
+          "undetected": 29
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://images.scalero.io/email_assets/3766/9G4X95BQXWZ97Y4SMTOY3K2LWDZZ03CWX904KK6B9RXN8NT5KXDNZ2JKZF5QYHU3.png": {
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "harmless": 67,
+          "undetected": 30
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://userimg-assets.customeriomail.com/images/client-env-93295/1736257678190_notion-logo-small-supports-dark_01JH0GBB5PBAN054H9NQK4JNBX.png": {
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "harmless": 67,
+          "undetected": 30
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://e.customeriomail.com/manage_subscription_preferences/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "http://track.customer.io/unsubscribe/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vbm90aW9uLnNvP3V0bV9jYW1wYWlnbj1Kb2luZXIrT25ib2FyZGluZysyMDI1XHUwMDI2dXRtX2NhbXBhaWduaWQ9NTI1XHUwMDI2dXRtX2NhbXBhaWdudHlwZT10cmFuc2FjdGlvbmFsXHUwMDI2dXRtX2NvbnRlbnQ9RW1haWwrOCstK2NoZWNrbGlzdFx1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiZWZkODA1YzkyY2NkNGRmZWUyY2U1MSIsImxpbmtfaWQiOjExM30/13cec3a19b6afe970536216c47026c085672cf800bc54d8e5d4ad38f4a51aeb7": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://e.customeriomail.com/unsubscribe/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5zby8_dXRtX2NhbXBhaWduPUpvaW5lcitPbmJvYXJkaW5nKzIwMjVcdTAwMjZ1dG1fY2FtcGFpZ25pZD01MjVcdTAwMjZ1dG1fY2FtcGFpZ250eXBlPXRyYW5zYWN0aW9uYWxcdTAwMjZ1dG1fY29udGVudD1FbWFpbCs4Ky0rY2hlY2tsaXN0XHUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiJlZmQ4MDVjOTJjY2Q0ZGZlZTJjZTUxIiwibGlua19pZCI6Mn0/fa70aa5569ffc57f582c3eea8d9f93344c919b06413b4d7925ac33ffa0116ae4": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://www.notion.so/notion/Privacy-Policy-3468d120cf614d4c9014c09f6adc9091?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://www.notion.com/product/mail?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://images.scalero.io/email_assets/3766/LTNA8VPNRTKPNESXW5C2ZB6R0BOKFBQZF6KDIPJ8JH8M5XS1KOOOGPZLBQT77I4X.png": {
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "harmless": 68,
+          "undetected": 29
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://e.customeriomail.com/e/o/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09In0=": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://userimg-bee.customeriomail.com/images/client-env-93295/editor_images/hiring_spot_0001_Layer-51.png": {
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "harmless": 69,
+          "undetected": 27
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5jb20vcHJvZHVjdC9jYWxlbmRhcj91dG1fY2FtcGFpZ249Sm9pbmVyK09uYm9hcmRpbmcrMjAyNVx1MDAyNnV0bV9jYW1wYWlnbmlkPTUyNVx1MDAyNnV0bV9jYW1wYWlnbnR5cGU9dHJhbnNhY3Rpb25hbFx1MDAyNnV0bV9jb250ZW50PUVtYWlsKzgrLStjaGVja2xpc3RcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8iLCJpbnRlcm5hbCI6ImVmZDgwNWM5MmNjZDRkZmVlMmNlNTEiLCJsaW5rX2lkIjoxMTgxM30/318cbb2b619d3cf25ec4f88d930ad8b9c98338dbd6969cf55a787f0106b5f508": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "http://track.customer.io/manage_subscription_preferences/dgTv2AUBAP7izlH94s5RAZiIe7FURzGbA_t2n-0fvw==": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://www.notion.so/?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://userimg-assets.customeriomail.com/images/client-env-93295/1750781855794_Artboard%201_01JYHBP2GXG34X8GNZRVMEK20T.png": {
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "harmless": 67,
+          "undetected": 30
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://notion.so/?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://www.notion.com/product/calendar?utm_campaign=Joiner+Onboarding+2025&utm_campaignid=525&utm_campaigntype=transactional&utm_content=Email+8+-+checklist&utm_medium=email_action&utm_source=customer.io": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      },
+      "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnVHYyQVVCQVA3aXpsSDk0czVSQVppSWU3RlVSekdiQV90Mm4tMGZ2dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lm5vdGlvbi5zby9ub3Rpb24vUHJpdmFjeS1Qb2xpY3ktMzQ2OGQxMjBjZjYxNGQ0YzkwMTRjMDlmNmFkYzkwOTE_dXRtX2NhbXBhaWduPUpvaW5lcitPbmJvYXJkaW5nKzIwMjVcdTAwMjZ1dG1fY2FtcGFpZ25pZD01MjVcdTAwMjZ1dG1fY2FtcGFpZ250eXBlPXRyYW5zYWN0aW9uYWxcdTAwMjZ1dG1fY29udGVudD1FbWFpbCs4Ky0rY2hlY2tsaXN0XHUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiJlZmQ4MDVjOTJjY2Q0ZGZlZTJjZTUxIiwibGlua19pZCI6MTMwMzR9/495bb4a4977d2cda045b83515a3c4f804744aaae820112deac3a20621b76b4e7": {
+        "virustotal": {
+          "error": "API error: 404"
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      }
+    },
+    "domains": {
+      "customer.io": {
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "harmless": 65,
+          "undetected": 29
+        },
+        "whois": {
+          "registrar": "1API GmbH",
+          "creation_date": "2011-10-26 00:45:34",
+          "expiration_date": "2025-10-26 00:45:34",
+          "name_servers": [
+            "ns-1181.awsdns-19.org",
+            "ns-1893.awsdns-44.co.uk",
+            "ns-499.awsdns-62.com",
+            "ns-618.awsdns-13.net"
+          ],
+          "emails": null
+        },
+        "domain_age": 5056
+      },
+      "customeriomail.com": {
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "harmless": 64,
+          "undetected": 30
+        },
+        "whois": {
+          "registrar": "1API GmbH",
+          "creation_date": "2012-05-24 21:15:21",
+          "expiration_date": "2026-05-24 21:15:21",
+          "name_servers": [
+            "NS-1432.AWSDNS-51.ORG",
+            "NS-152.AWSDNS-19.COM",
+            "NS-1865.AWSDNS-41.CO.UK",
+            "NS-577.AWSDNS-08.NET",
+            "ns-1432.awsdns-51.org",
+            "ns-152.awsdns-19.com",
+            "ns-1865.awsdns-41.co.uk",
+            "ns-577.awsdns-08.net"
+          ],
+          "emails": [
+            "abuse@1api.net",
+            "info@domain-contact.org"
+          ]
+        },
+        "domain_age": 4844
+      },
+      "notion.so": {
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "harmless": 66,
+          "undetected": 28
+        },
+        "whois": {
+          "registrar": "1API",
+          "creation_date": "2015-03-31 00:00:00",
+          "expiration_date": "2026-03-31 00:00:00",
+          "name_servers": [
+            "woz.ns.cloudflare.com",
+            "dana.ns.cloudflare.com"
+          ],
+          "emails": "admin-c@1api.net"
+        },
+        "domain_age": 3804
+      },
+      "scalero.io": {
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "harmless": 63,
+          "undetected": 31
+        },
+        "whois": {
+          "registrar": "1API GmbH",
+          "creation_date": "2019-07-30 02:32:54",
+          "expiration_date": "2026-07-30 02:32:54",
+          "name_servers": [
+            "ns-358.awsdns-44.com",
+            "ns-1775.awsdns-29.co.uk",
+            "ns-831.awsdns-39.net",
+            "ns-1141.awsdns-14.org"
+          ],
+          "emails": null
+        },
+        "domain_age": 2222
+      },
+      "notion.com": {
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "harmless": 64,
+          "undetected": 30
+        },
+        "whois": {
+          "registrar": "Amazon Registrar, Inc.",
+          "creation_date": "1997-10-06 04:00:00",
+          "expiration_date": "2033-10-05 04:00:00",
+          "name_servers": [
+            "DANA.NS.CLOUDFLARE.COM",
+            "WOZ.NS.CLOUDFLARE.COM"
+          ],
+          "emails": [
+            "trustandsafety@support.aws.com",
+            "711dbc6c-381f-4cfd-834a-6053943303e8@identity-protect.org"
+          ]
+        },
+        "domain_age": 10189
+      },
+      "mail.notion.so": {
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "harmless": 64,
+          "undetected": 30
+        },
+        "whois": {
+          "registrar": "1API",
+          "creation_date": "2015-03-31 00:00:00",
+          "expiration_date": "2026-03-31 00:00:00",
+          "name_servers": [
+            "woz.ns.cloudflare.com",
+            "dana.ns.cloudflare.com"
+          ],
+          "emails": "admin-c@1api.net"
+        },
+        "domain_age": 3804
+      }
+    },
+    "hashes": {}
+  },
+  "risk_assessment": {
+    "total_score": 100,
+    "risk_level": "High Risk",
+    "score_breakdown": {
+      "authentication_failure": 0,
+      "new_domain": 0,
+      "known_phishing_domain": 0,
+      "malicious_file": 0,
+      "malicious_url": 0,
+      "suspicious_keywords": 0,
+      "header_inconsistencies": 30,
+      "domain_mismatch": 75,
+      "hidden_content": 60,
+      "suspicious_formatting": 0,
+      "grammar_errors": 0,
+      "urgent_language": 0,
+      "free_email_service": 0,
+      "domain_misspelling": 0,
+      "unusual_send_time": 10,
+      "sensitive_info_request": 0,
+      "base64_content": 15,
+      "embedded_form": 0,
+      "tracking_pixel": 0,
+      "password_protected_attachment": 0,
+      "invoice_attachment": 0,
+      "suspicious_extension": 0
+    }
+  }
+}

@@ -1,0 +1,292 @@
+{
+  "email_data": {
+    "headers": {
+      "Received": "from nisihfjoz.co.uk (103.167.154.120) by DM6NAM11FT012.mail.protection.outlook.com (10.13.173.109) with Microsoft SMTP Server id 15.20.5791.20 via Frontend Transport; Thu, 3 Nov 2022 02:44:27 +0000",
+      "Authentication-Results": "spf=none (sender IP is 103.167.154.120) smtp.mailfrom=nisihfjoz.co.uk; dkim=fail (no key for signature) header.d=microsoft.com;dmarc=fail action=oreject header.from=microsoft.com;compauth=fail reason=000",
+      "Received-SPF": "None (protection.outlook.com: nisihfjoz.co.uk does not designate permitted sender hosts)",
+      "X-IncomingTopHeaderMarker": " OriginalChecksum:1D964341C0A4CC1E576F43147716339DB73C1C201F3F32CC01CED7B3192600E6;UpperCasedChecksum:3F65DD7B72E32363FF37B2AC0455DA739A4DF5372DD2B2996C58B1914FE8970E;SizeAsReceived:1013;Count:12",
+      "DKIM-Signature": "v=1; a=rsa-sha1; c=relaxed/relaxed; s=smtp; d=microsoft.com; h=From:Subject:To:Date:Reply-To:Content-Type:Content-Transfer-Encoding:Mime-Version; i=no-reply@microsoft.com; bh=1Js6rJsspG0dUqXbFD+B+D99j9Q=; b=CbCcW08xMTkBhkIAadJCxkoeOVZT8UP6zpqefMQiU2SliNdwnrc7n2JCNsOrIGQcqmMk1qa3+7m5   QwxsIquHWYKS0Lird71glrZP49jbr4q/qk21MAcNRlfjijzbJCII0aXvt2ETAbV/zd5IUgNlltJP   RD2a5xfLVRDSGxjz3g8=",
+      "DomainKey-Signature": "a=rsa-sha1; c=nofws; q=dns; s=smtp; d=microsoft.com; b=q3qKld9LxwNDjjs7BRMEPQK0oIvbU0Th9qgql7aVS/d2Q2WX1Dl3IM2T3CfjdMSMI84ZYRxcWA7r   +lpRnVW1Ab5HjXBX5r86FrO0pR0wCBXkNJUV2ZefpW2I9Vdir1l9tjLVWexAF6H5N8gi4gAl5y5V   l5zsDzSQew+p9Q+T1RI=;",
+      "From": "Microsoft account team <no-reply@microsoft.com>",
+      "Subject": "Microsoft account unusual sign-in activity",
+      "To": "phishing@pot",
+      "Date": "Thu, 03 Nov 2022 02:44:27 +0000",
+      "Reply-To": "media-protection@usual-assist.com",
+      "Content-Type": "text/html; charset=\"UTF-8\"",
+      "Content-Transfer-Encoding": "8bit",
+      "X-IncomingHeaderCount": "12",
+      "Message-ID": " <ce2fb41e-b910-4df7-bbfb-43b8126ba45c@DM6NAM11FT012.eop-nam11.prod.protection.outlook.com>",
+      "Return-Path": "bounce@nisihfjoz.co.uk",
+      "X-MS-Exchange-Organization-ExpirationStartTime": "03 Nov 2022 02:44:28.3088 (UTC)",
+      "X-MS-Exchange-Organization-ExpirationStartTimeReason": "OriginalSubmit",
+      "X-MS-Exchange-Organization-ExpirationInterval": "1:00:00:00.0000000",
+      "X-MS-Exchange-Organization-ExpirationIntervalReason": "OriginalSubmit",
+      "X-MS-Exchange-Organization-Network-Message-Id": " 231e98fc-f88f-49b7-2cb7-08dabd4553d3",
+      "X-EOPAttributedMessage": "0",
+      "X-EOPTenantAttributedMessage": "84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0",
+      "X-MS-Exchange-Organization-MessageDirectionality": "Incoming",
+      "X-MS-PublicTrafficType": "Email",
+      "X-MS-TrafficTypeDiagnostic": "DM6NAM11FT012:EE_|DS7PR19MB5976:EE_",
+      "X-MS-Exchange-Organization-AuthSource": " DM6NAM11FT012.eop-nam11.prod.protection.outlook.com",
+      "X-MS-Exchange-Organization-AuthAs": "Anonymous",
+      "X-MS-UserLastLogonTime": "11/3/2022 12:11:24 AM",
+      "X-MS-Office365-Filtering-Correlation-Id": "231e98fc-f88f-49b7-2cb7-08dabd4553d3",
+      "X-MS-Exchange-EOPDirect": "true",
+      "X-Sender-IP": "103.167.154.120",
+      "X-SID-PRA": "NO-REPLY@MICROSOFT.COM",
+      "X-SID-Result": "FAIL",
+      "X-MS-Exchange-Organization-PCL": "2",
+      "X-MS-Exchange-Organization-SCL": "9",
+      "X-Microsoft-Antispam": "BCL:5;",
+      "X-MS-Exchange-CrossTenant-OriginalArrivalTime": "03 Nov 2022 02:44:27.9963 (UTC)",
+      "X-MS-Exchange-CrossTenant-Network-Message-Id": "231e98fc-f88f-49b7-2cb7-08dabd4553d3",
+      "X-MS-Exchange-CrossTenant-Id": "84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa",
+      "X-MS-Exchange-CrossTenant-AuthSource": " DM6NAM11FT012.eop-nam11.prod.protection.outlook.com",
+      "X-MS-Exchange-CrossTenant-AuthAs": "Anonymous",
+      "X-MS-Exchange-CrossTenant-FromEntityHeader": "Internet",
+      "X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg": " 00000000-0000-0000-0000-000000000000",
+      "X-MS-Exchange-Transport-CrossTenantHeadersStamped": "DS7PR19MB5976",
+      "X-MS-Exchange-Transport-EndToEndLatency": "00:00:01.9907400",
+      "X-MS-Exchange-Processed-By-BccFoldering": "15.20.5769.021",
+      "X-Message-Flag": "Flag",
+      "Importance": "high",
+      "X-Priority": "1",
+      "X-Microsoft-Antispam-Mailbox-Delivery": "\trwl:0;ucf:0;jmr:0;ex:0;psp:0;auth:0;dest:J;OFR:SpamFilterAuthJ;ENG:(5062000305)(90000117)(90005022)(91005020)(91035115)(5061607266)(5061608174)(9050020)(9100338)(2008001134)(2008121020)(4810004)(4910033)(9710001)(9610025)(9508001)(9509001)(9520007)(10115022)(9320005)(9207001)(9245025);RF:JunkEmail;",
+      "X-Message-Info": "\t6hMotsjLow+yTsFRVijelVZ1fmLlO9+LfINrT8NhXYhEM8uUY/YT/7yWoALFOzRIsQN5cFQRjXY7Z09rhg5D04gjwSSVuNqIAzfkRQo2jguLavpwReeWiAhTI0IdCre2xkIUJRIJWbRPq1CY+8RUV1FoQ3YG8yZHQdGxwRY6vdJuYfQVAYduWjZsD5hFzZBm0F92P9SYGFRObAtw03PwAw==",
+      "X-Message-Delivery": "Vj0xLjE7dXM9MDtsPTA7YT0wO0Q9MjtHRD0zO1NDTD02",
+      "X-Microsoft-Antispam-Message-Info": "\t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",
+      "MIME-Version": "1.0"
+    },
+    "subject": "Microsoft account unusual sign-in activity",
+    "from": "Microsoft account team <no-reply@microsoft.com>",
+    "to": "phishing@pot",
+    "cc": "",
+    "bcc": "",
+    "date": "Thu, 03 Nov 2022 02:44:27 +0000",
+    "body": {
+      "text": "",
+      "html": "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><table dir=\"ltr\" style=\"height: 323px;\">\n<tbody>\n<tr style=\"height: 22px;\">\n<td id=\"i1\" style=\"padding: 0px; font-family: 'Segoe UI Semibold', 'Segoe UI Bold', 'Segoe UI', 'Helvetica Neue Medium', Arial, sans-serif; font-size: 17px; color: #707070; height: 22px; width: 696px;\">Microsoft account</td>\n</tr>\n<tr style=\"height: 53px;\">\n<td id=\"i2\" style=\"padding: 0px; font-family: 'Segoe UI Light', 'Segoe UI', 'Helvetica Neue Medium', Arial, sans-serif; font-size: 41px; color: #2672ec; height: 53px; width: 696px;\">Unusual sign-in activity</td>\n</tr>\n<tr style=\"height: 18px;\">\n<td id=\"i3\" style=\"padding: 25px 0px 0px; font-size: 14px; font-family: 'Segoe UI', Tahoma, Verdana, Arial, sans-serif; color: #2a2a2a; height: 18px; width: 696px;\">We detected something unusual about a recent sign-in to the Microsoft account <a id=\"iAccount\" class=\"link\" dir=\"ltr\" style=\"color: #2672ec; text-decoration: none;\" href=\"mailto:media-protection@usual-assist.com?&amp;cc=media-protection@usual-assist.com\n&amp;Subject=Report+The+User\">phishing@pot</a>.</td>\n</tr>\n<tr style=\"height: 18px;\">\n<td id=\"i4\" style=\"padding: 25px 0px 0px; font-family: 'Segoe UI Bold', 'Segoe UI Semibold', 'Segoe UI', 'Helvetica Neue Medium', Arial, sans-serif; font-size: 14px; font-weight: bold; color: #2a2a2a; height: 18px; width: 696px;\"><strong>Sign-in details</strong></td>\n</tr>\n<tr style=\"height: 18px;\">\n<td id=\"i5\" style=\"padding: 6px 0px 0px; font-family: 'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size: 14px; color: #2a2a2a; height: 18px; width: 696px;\">Country/region: <strong>Russia/Moscow</strong></td>\n</tr>\n<tr style=\"height: 18px;\">\n<td id=\"i6\" style=\"padding: 6px 0px 0px; font-family: 'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size: 14px; color: #2a2a2a; height: 18px; width: 696px;\">IP address: <strong>103.225.77.255</strong></td>\n</tr>\n<tr style=\"height: 18px;\">\n<td id=\"i7\" style=\"padding: 6px 0px 0px; font-family: 'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size: 14px; color: #2a2a2a; height: 18px; width: 696px;\">Date: <strong>Thu, 03 Nov 2022 02:40:58 +0000</strong></td>\n</tr>\n<tr style=\"height: 18px;\">\n<td id=\"i8\" style=\"padding: 6px 0px 0px; font-family: 'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size: 14px; color: #2a2a2a; height: 18px; width: 696px;\">Platform: <strong>Windows 10</strong></td>\n</tr>\n<tr style=\"height: 18px;\">\n<td id=\"i9\" style=\"padding: 6px 0px 0px; font-family: 'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size: 14px; color: #2a2a2a; height: 18px; width: 696px;\">Browser: <strong>Firefox</strong></td>\n</tr>\n<tr style=\"height: 36px;\">\n<td id=\"i10\" style=\"padding: 25px 0px 0px; font-family: 'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size: 14px; color: #2a2a2a; height: 36px; width: 696px;\">A user from <strong>Russia/Moscow</strong> just logged into your account from a new device, If this wasn't you, please report the user. If this was you, we'll trust similar activity in the future.</td>\n</tr>\n<tr style=\"height: 32px;\">\n<td style=\"padding: 25px 0px 0px; font-family: 'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size: 14px; color: #2a2a2a; height: 32px; width: 696px;\">\n<table border=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"background-color: #2672ec; min-width: 50px; padding: 5px 20px 5px 20px;\" bgcolor=\"#2672ec\"><a id=\"i11\" style=\"font-family: 'Segoe UI Semibold', 'Segoe UI Bold', 'Segoe UI', 'Helvetica Neue Medium', Arial, sans-serif; font-size: 14px; text-align: center; text-decoration: none; font-weight: 600; letter-spacing: 0.02em; color: #fff;\" href=\"mailto:media-protection@usual-assist.com?&amp;cc=media-protection@usual-assist.com&amp;subject=unusual sign-in activity&amp;body=Report The User\">Report The User</a></td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n<tr style=\"height: 18px;\">\n<td id=\"i12\" style=\"padding: 25px 0px 0px; font-family: 'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size: 14px; color: #2a2a2a; height: 18px; width: 696px;\">To opt out or change where you receive security notifications, <a id=\"iLink5\" class=\"link\" style=\"color: #2672ec; text-decoration: none;\" href=\"mailto:media-protection@usual-assist.com\n?&amp;cc=media-protection@usual-assist.com\n&amp;Subject=Unsubscribe+me\">click here</a>.</td>\n</tr>\n<tr style=\"height: 18px;\">\n<td id=\"i13\" style=\"padding: 25px 0px 0px; font-family: 'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size: 14px; color: #2a2a2a; height: 18px; width: 696px;\">Thanks,</td>\n</tr>\n<tr style=\"height: 18px;\">\n<td id=\"i14\" style=\"padding: 0px; font-family: 'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size: 14px; color: #2a2a2a; height: 18px; width: 696px;\">The Microsoft account team</td>\n</tr>\n<img alt=\"\" src=\"http://sefnet.net/track/o7436EVFfO5968877utQY8065QJB8855GHAz1\" width=\"1px\" height=\"1px\" style=\"visibility:hidden\">\n</tbody>\n</table>\n\n<style type=\"text/css\">nergie b326,\n\ntweeting pbt85voo_pm,\n\ndetecting,\n\ncacher bec4 plea,\n\nbfba robuste,\n\nd21c,\n\nsami,\n\npensamientos,\n\nstatic,\n\nmaldives,\n\nbbca,\n\nwuhan,\n\na439,\n\na1a0,\n\nextpm,\n\nwithdrawal hora,\n\nb09b b531,\n\ne1e9,\n\nintroduire westjet,\n\naula bbcc,\n\ncomplying,\n\na786,\n\nrealised,\n\nf104,\n\npremises,\n\nmailbag,\n\nheavenly a466 portugu,\n\naad7 leftcol,\n\ntrailing,\n\nmt50,\n\ncontre,\n\npleno,\n\nproducir,\n\nf4d4 countertop denmark,\n\nea97 b016,\n\nba27 temporales,\n\nmailtrack cloudinary,\n\nartikeln,\n\na198 ec1a centercolumn,\n\nbesucht bunch,\n\nconclu a645 talebi,\n\nbersicht ips_logo,\n\nerstellt acupuncture actuales,\n\nblicas ddcb,\n\nrata taper,\n\nayuda durum,\n\nb917,\n\nndtv_logo vibrations,\n\nnite forks,\n\nduda,\n\nrecord depository avanzar,\n\ndaa0 soit,\n\ntilting app_logo w100,\n\nhil_t1wc0dbm goya,\n\n11pt index__logo pertenecen,\n\ngraciela b73b,\n\nsubstituted liable app_store_logo,\n\nyarn alumno,\n\nreminder materias replacing,\n\naukshndac_pm reforzar,\n\ninstrument,\n\na1fc,\n\nicon__caret,\n\nsopranos,\n\nabordar,\n\nances ransom unbegrenzt,\n\nconcorde img_1633,\n\nhc_post_as paddingtop10 b727,\n\nesperamos looked,\n\nmattias snapping recording,\n\nneg_bofa dd39,\n\ncontemplate,\n\nproduccion,\n\ntitle4,\n\nb6d5,\n\nsimplisafe,\n\n_total_,\n\navila,\n\nrifiez,\n\naero,\n\npatti,\n\nb595,\n\ncolegio,\n\na308,\n\nfp_1400x1400,\n\na457,\n\nc575 munster_logo lluvia,\n\nx2019 music,\n\nrichly,\n\nalkaline,\n\nelena,\n\ndejo,\n\nforums mite,\n\nmagento superiores,\n\nsentation scope,\n\nanwar,\n\na034,\n\na16a,\n\nbea9,\n\nclj858j4_pm,\n\nrechnung,\n\nministerio sebastien,\n\nb507 footer_v2,\n\nnachfrage,\n\nmartel cologique debat_2160776,\n\npascual tore,\n\nhige da13 botella,\n\nbadge_logo lacy,\n\na07f,\n\ncriptomonedas,\n\ntraslados,\n\nlogo_outer,\n\nc87e,\n\ntokens ayuntamiento,\n\njuguetes riences,\n\nproductores,\n\nd29e,\n\nco2_4837443,\n\ne027,\n\na4c7,\n\nrancher,\n\na024 justa bc56,\n\nmsci hmenu_logo,\n\nuc_zav2ewlhf zuerst d0be,\n\nleuchten topix,\n\nmisma,\n\nreached,\n\nf4f8,\n\na0a1,\n\nb8f5,\n\nfb68 vergangenheit,\n\ndecathlon geimpfte,\n\na92b,\n\nllena,\n\ndeux,\n\nlabour,\n\nrestez,\n\nromania,\n\ngrohl interessante ac29,\n\ndunlop montes,\n\nsoweit,\n\neaac,\n\na863,\n\na388,\n\nlogistico,\n\nad85 bffc manifold,\n\nyouversion a29c,\n\nshowmenu,\n\na663,\n\nx_1805,\n\nc0d5,\n\nsituada,\n\nnbcnews commun c764,\n\njacques osteoporosis,\n\ncomptons,\n\nkombinera,\n\npreise,\n\nchuck,\n\nb195,\n\ncaer fd9a mnemonic,\n\nsimpson a35b,\n\na352,\n\ntarifaire,\n\nwear,\n\nreassure,\n\ntrifft,\n\ngenera,\n\ngenes,\n\npack bunch,\n\ntroubleshoot,\n\ninvestigating,\n\nab07 hallan a546,\n\nd3d6 bae3,\n\npreferenze b69b niemals,\n\ninteractivo vemos,\n\nrobin,\n\na9c1,\n\na11c,\n\nc142,\n\ncac1,\n\nregistrati schluss baird,\n\nw256 novedad,\n\nfigueroa,\n\nmorceaux,\n\nf9e5,\n\na66e,\n\nad61,\n\nhutchinson optics,\n\nna5vufcg_pm carburants,\n\njeunes_4845685,\n\ncobb baumarkt worldview,\n\ndavis waterstones,\n\nrecorte,\n\na539,\n\nc206,\n\ncircunstancia,\n\nschweiz,\n\nital barrera,\n\ndigitalen robbing,\n\nwelfare,\n\nattachments loom bb68,\n\nquinoa b590,\n\nserie atencion,\n\nbarrios af4d,\n\nbac7,\n\nb18a,\n\nbodas,\n\nouter_wrap,\n\nwaging,\n\nsubj,\n\nbuilding_ice,\n\nb268,\n\nconstitucional,\n\nlogo__culture,\n\nrow4,\n\ngoodreads,\n\ncorpse,\n\naf49,\n\nballard,\n\nlovingly,\n\namsterdam bc0b,\n\ndbe0 flight_86056,\n\ntheatres,\n\nac3f reportaje agencias,\n\nemptied a7fe,\n\nbureaucratic b981,\n\ninvitaci staffed,\n\nkiosks,\n\npokemon sendungen f5a8,\n\ndisciples licensees,\n\nlogo_3 interne,\n\nstatistik arbeitet,\n\nf2f2f2,\n\nb5c1,\n\nfacultad,\n\naporta,\n\nexclus,\n\nnimm,\n\nvictor,\n\nloudoun,\n\nvorsitzende,\n\nace2,\n\nvt4vqbo8_pm,\n\nsamui renal,\n\nuc_store mp_logo,\n\nsponsor_logo,\n\nb9bf,\n\nawakening 11pt,\n\nb5d6,\n\n_logo,\n\nrhonda,\n\ndiaz paddingtop,\n\natkinson ca0a,\n\ncontinente,\n\nniro ineligible sezione_351,\n\npager__item ae87,\n\nvittoria,\n\nverder,\n\nevaporating,\n\nfisica,\n\nad46,\n\na541,\n\ndeclara,\n\nvises,\n\nliberado,\n\nfilm_pages,\n\nc409 n2i0r8hg_pm logo_08,\n\ne845 bbe1,\n\nhouseholds daphne a3f9,\n\nb71e daardoor,\n\nb565,\n\nassoc,\n\npera,\n\nba3e,\n\nb219,\n\nspaced aelig a7bd,\n\nba92 a2f4,\n\navisa supporting analizado,\n\ndades c384,\n\nweighed buckeye,\n\nd2232a tecnico,\n\nscholarships,\n\nfont14 depart,\n\nd08d dere,\n\nrichten,\n\nb3e9 ml10,\n\nb185 bd081c,\n\nfaf6,\n\nssel,\n\nea05,\n\nsumo,\n\nlogo__icon,\n\ntransferencia,\n\nb79e pager beer_garden,\n\na13a mittlerweile,\n\nreporte seam,\n\nb2cc f276,\n\npainting,\n\nb0c4,\n\nmarkeets_logo,\n\nphilipp,\n\nencompasses,\n\nnils,\n\nlogo_set b02c nueve,\n\nfingers lsow_settings,\n\na823 b156 x2018,\n\na512 a836,\n\naragon,\n\nd1d1d1,\n\ntoasts__logo,\n\nevolved,\n\nreplace_2x,\n\nbrunt tapia rudolph,\n\npanelists metre,\n\ncompleted c542,\n\ndave benfit,\n\nwolfe,\n\ncomplex forts,\n\naxjch sheryl,\n\na26f,\n\npm_1200x768 ae55,\n\na764 dce3,\n\nscalise,\n\nnerg renvoyer forgot_option,\n\naed0 ab28,\n\ntop4 desayuno,\n\ndeceptive c6e0,\n\nexclaimed,\n\nthibaut,\n\nb6ea,\n\nicici,\n\nsummary_3x2,\n\nbb39,\n\nkommunikation edwards,\n\nbe9a mallory,\n\nmechanism,\n\nkaki footer_logo,\n\nencuestas fieles,\n\nquv73pek_pm,\n\narms,\n\nconsell,\n\nc5b1,\n\nteaser,\n\nb31d,\n\nmeatball empleos,\n\ngolpes maxcdn,\n\ndixon,\n\nsmoking reverso msg_logo_111,\n\npavillon pager__items,\n\nantoinette b3da,\n\na3ef a68b,\n\nyesterday,\n\nprot nottingham keene,\n\nfavoriser durchgef,\n\nf2f6,\n\nbahnhof,\n\ngeimpft,\n\nleica,\n\nshone,\n\nquede,\n\nf5f5f7,\n\nburnt,\n\na51e,\n\nkjell,\n\naccompanied manage_account klicke,\n\nliteral troop,\n\ngiraffe brains ad05,\n\nassocier changeable,\n\npoeta e138 cese,\n\nmentaire asistir,\n\nbed8 murky ea4f,\n\nsamaritan hc_sailthru,\n\niefix ffcb10,\n\nheed,\n\nmaestros,\n\nspotlights,\n\nticas,\n\nhabitaciones displacement rjp5612_bse,\n\nb2d4 a400,\n\nnuria biblical,\n\na778 a7da,\n\ngiorgio,\n\nadelphi c08b bonnier,\n\npoeta emily weisen,\n\nerna barometer puffs,\n\n_17a elkaar,\n\ndf47 greenwashing,\n\nf28f copy1,\n\nnorthbound,\n\ntsla dragon bc16,\n\na411 facilitar,\n\nantibiotic,\n\nsennheiser,\n\npaddling,\n\na861,\n\ndevin,\n\nrestricting,\n\npenne,\n\naptos,\n\ncoordinador,\n\nbott,\n\nkessler,\n\nappuyer,\n\nbosques,\n\nramifications,\n\ne91f,\n\nexecution,\n\nb32a,\n\nblaming,\n\ncharter,\n\naec6,\n\npiloting,\n\nservlet,\n\ngallery_,\n\nrouler,\n\nsupone,\n\nstoxx consciously bumble,\n\nburl annat,\n\nnace faq_link,\n\nunter c877,\n\na3a6,\n\nmontreal kpbkfj5g_pm,\n\ncabbage cnica,\n\nsituaciones,\n\nthe_shovel_,\n\nrockin,\n\nnatasha,\n\naf81,\n\nmancha,\n\nalerta b735 fbf4,\n\nskyward pubads,\n\nhi2u4rj8_pm glen,\n\noctopus fosse,\n\nrenseignez,\n\nb90f tanja avisos,\n\npoll_msg_ dubbed,\n\ncitrus debat bb77,\n\nquesos lgbtqia,\n\ncalves,\n\nsquare_2x,\n\nbc25,\n\nsebi,\n\nlogo_tablet,\n\nyxxx b6fc,\n\nb022 e676,\n\na62e,\n\nambito,\n\nf76d,\n\nprevisiones,\n\ndevait,\n\nbnrt_gb,\n\na796 hampstead honeywell,\n\nuniqlo auraient,\n\nestafas,\n\nmikhail,\n\nwary,\n\nknak,\n\nmatthew,\n\nb8cf underway,\n\nassignments be68,\n\npistes,\n\ne9c4 b7c4,\n\na4ec f654,\n\nlogs1238,\n\nb15f c340 slack,\n\naa08 ramada,\n\nac13 outward enrichment,\n\nsvetlana asheville,\n\nfourths aftershocks,\n\na172 feta,\n\nstyle5,\n\ninstalado,\n\nhoods,\n\nreconoce,\n\npodcast_banner,\n\noubli,\n\nzimmer momo bfed,\n\ntypo ados rgate micro,\n\ncaetano confines,\n\nilse b63c,\n\na7a9,\n\nestrenos,\n\nb9ba,\n\ne7d1,\n\nelaborar,\n\ntestimonio,\n\nj5qkw_uc weaver,\n\nportrait auftrag,\n\nb19e,\n\nlogo_4 cords,\n\nroque ndra,\n\nzanzibar,\n\nb776 b489,\n\ncomunicar efectuadas,\n\nheather,\n\nexpedia,\n\nquay,\n\nneurons,\n\nspoilers,\n\nintrigue,\n\ngoya_3003 manifiesto turner,\n\nt_qty b31c,\n\ndemolished,\n\nb453,\n\nb370,\n\njoan,\n\ncalibre,\n\nrepas,\n\nblumen,\n\nshifter,\n\nbuscador,\n\nhilton,\n\ntomaten,\n\nmediante,\n\na51a,\n\nlogo_01,\n\nincompetence,\n\nsecr carne,\n\nimglogo edinburgh,\n\na93b,\n\nhalign manzana,\n\n__tbc acton,\n\nencompass,\n\nstolen stammen circulaire,\n\nblader b9b1,\n\naccrue calgary likeness,\n\nkurzfristig unsubscribing,\n\niss_1635753 rector,\n\nphilippa emisiones,\n\nbohemia,\n\nsoll,\n\nsep_1313,\n\nf192,\n\nmisuse,\n\nesso,\n\nvendedor,\n\na800,\n\nb0bd,\n\nrulers,\n\nboden,\n\nravis,\n\ne053,\n\nlogo_tatort,\n\npresence,\n\nrenoncer,\n\nunblocking production amenaza,\n\nantiguo b05d,\n\nchlorine eingang dde1,\n\nconstituye cooperativa,\n\ntournage abel,\n\nsubmitting fromages,\n\na42c,\n\nnordics,\n\nverpackung,\n\nseasonally,\n\nstrongsville,\n\nreceives,\n\ncoppell bowl_16x9 b6ae,\n\nremastered cabriolet,\n\nreviens bef3 x_1860,\n\nb53c ba2b,\n\ncolumna river__kicker,\n\nbrian sorprendente,\n\n_construct,\n\noiseau bd5b,\n\nb67d ae96,\n\nseta,\n\nipa_ text7,\n\ncampsite plugs,\n\ncabine,\n\nrazon__logo,\n\naaa8,\n\ntief,\n\nstreams,\n\nc8b5,\n\na098 stardust,\n\nemotivo colonialism,\n\nnikos,\n\nmaura,\n\nmess,\n\ningreso,\n\nling,\n\nsturm,\n\na7ac a79e e040,\n\nzoals b753,\n\nnjf_logo_f1 condici,\n\npreaching centernav_logo,\n\nbetr,\n\nfiscales_ad,\n\nf0f0f0,\n\nnumerosas,\n\nrechter,\n\nendings,\n\nmountains participants populist,\n\npresentado consequential,\n\ngray-boughed brethren,\n\ntira italic,\n\ngarth,\n\nmika ba87,\n\ndd30 logo_6310096,\n\nsurveiller b12b,\n\ntencent clair,\n\ninconsolata llevas,\n\nouvrent,\n\neac2 remboursements,\n\nnewswire f1a5,\n\nbae9,\n\nplein mutiny,\n\ncondominium entrata,\n\npedi,\n\nscot markers,\n\nprotonmail utiliza,\n\na090,\n\ncc8f hass zertifikat,\n\nxxx_wiken134 llegan,\n\na0d8 usabilla corrections,\n\nconsumo humbling,\n\nwht_footer a9b2,\n\na75c verlo,\n\nb544,\n\na8f9,\n\nremercier,\n\nlautsprecher,\n\ntiffany,\n\nretour,\n\ninst,\n\nmatias,\n\nf62c,\n\nb63d,\n\ndaumen,\n\nselber,\n\ncdn0,\n\nmercer,\n\nkommentare,\n\nliturgy,\n\ncadbury cucumbers possibility,\n\nprendront _post_2221,\n\npounding,\n\ndakota,\n\nsirloin,\n\nsundays,\n\nconsular,\n\ncontenuti horen,\n\nreadable vitale,\n\nj1lfq6dd_tec,\n\nbb64 xeon af0d,\n\nlt;1ex airline,\n\nubicar contamos,\n\nfulton acf3,\n\nbeholden,\n\naltri malfunction b568,\n\nresilience staring,\n\nratio_50p_0,\n\nreto,\n\nauftreten,\n\njuniors,\n\naussehen,\n\ndab8,\n\nfacilit,\n\nnatures,\n\nwitte,\n\nd909</style>\n"
+    },
+    "attachments": []
+  },
+  "header_analysis": {
+    "spf_result": "unknown",
+    "dkim_result": "fail",
+    "dmarc_result": "fail",
+    "sender_domain": "microsoft.com",
+    "reply_to_domain": "usual-assist.com",
+    "received_chain": [
+      {
+        "from_ip": "103.167.154.120",
+        "by_domain": "DM6NAM11FT012.mail.protection.outlook.com",
+        "with_protocol": "smtp",
+        "timestamp": "Thu, 3 Nov 2022 02:44:27 +0000"
+      }
+    ],
+    "x_headers": {
+      "X-Priority": "1"
+    },
+    "authentication_results": {
+      "spf": "none",
+      "dkim": "fail",
+      "dmarc": "fail"
+    },
+    "message_id_analysis": {
+      "message_id": " <ce2fb41e-b910-4df7-bbfb-43b8126ba45c@DM6NAM11FT012.eop-nam11.prod.protection.outlook.com>",
+      "domain_match": false,
+      "message_id_domain": "DM6NAM11FT012.eop-nam11.prod.protection.outlook.com",
+      "sender_domain": "microsoft.com"
+    },
+    "header_inconsistencies": [
+      "From domain (microsoft.com) doesn't match Reply-To domain (usual-assist.com)"
+    ]
+  },
+  "content_analysis": {
+    "urls": [
+      {
+        "url": "http://sefnet.net/track/o7436EVFfO5968877utQY8065QJB8855GHAz1",
+        "domain": "sefnet.net",
+        "registered_domain": "sefnet.net",
+        "path": "/track/o7436EVFfO5968877utQY8065QJB8855GHAz1",
+        "query": "",
+        "is_ip": false,
+        "is_shortened": false,
+        "suspicious_tld": false,
+        "subdomain_count": 0
+      }
+    ],
+    "suspicious_keywords": [],
+    "language_analysis": {
+      "has_grammar_errors": false,
+      "has_urgent_language": false,
+      "has_unicode_homoglyphs": false,
+      "readability_score": 0
+    },
+    "formatting_analysis": {
+      "hidden_elements": [
+        {
+          "tag": "img",
+          "content": ""
+        }
+      ],
+      "link_text_mismatch": [],
+      "suspicious_forms": [],
+      "external_resources": [
+        {
+          "tag": "img",
+          "src": "http://sefnet.net/track/o7436EVFfO5968877utQY8065QJB8855GHAz1"
+        }
+      ]
+    },
+    "domain_mismatch": [
+      {
+        "sender_domain": "microsoft.com",
+        "url_domain": "sefnet.net",
+        "url": "http://sefnet.net/track/o7436EVFfO5968877utQY8065QJB8855GHAz1"
+      }
+    ],
+    "hidden_text": []
+  },
+  "attachment_analysis": {
+    "attachments": [],
+    "total_count": 0,
+    "malicious_count": 0,
+    "suspicious_count": 0
+  },
+  "threat_intel": {
+    "ips": {
+      "103.167.154.120": {
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "harmless": 61,
+          "undetected": 33
+        },
+        "abuseipdb": {
+          "abuse_confidence_score": 0,
+          "total_reports": 0,
+          "country": "IN",
+          "isp": "DEBUGGING CODE",
+          "usage_type": null
+        },
+        "greynoise": {
+          "error": "API error: 404"
+        },
+        "geoip": {
+          "country": "India",
+          "region": "National Capital Territory of Delhi",
+          "city": "New Delhi",
+          "zip": "110001",
+          "lat": 28.6139,
+          "lon": 77.209,
+          "isp": "Debugging Code",
+          "org": "",
+          "as": ""
+        }
+      }
+    },
+    "urls": {
+      "http://sefnet.net/track/o7436EVFfO5968877utQY8065QJB8855GHAz1": {
+        "virustotal": {
+          "malicious": 4,
+          "suspicious": 0,
+          "harmless": 67,
+          "undetected": 20
+        },
+        "urlhaus": {
+          "error": "API error: 401"
+        },
+        "phishtank": {
+          "error": "API error: 403"
+        }
+      }
+    },
+    "domains": {
+      "sefnet.net": {
+        "virustotal": {
+          "malicious": 1,
+          "suspicious": 1,
+          "harmless": 61,
+          "undetected": 31
+        },
+        "whois": {
+          "registrar": "ABOVE.COM PTY LTD.",
+          "creation_date": "[datetime.datetime(2025, 7, 23, 17, 55, 1), datetime.datetime(2025, 7, 24, 3, 55, 1, 215690)]",
+          "expiration_date": "[datetime.datetime(2026, 7, 23, 17, 55, 1), datetime.datetime(2026, 7, 24, 3, 55, 1, 215690)]",
+          "name_servers": [
+            "NS11.ABOVEDOMAINS.COM",
+            "NS12.ABOVEDOMAINS.COM",
+            "ns11.abovedomains.com",
+            "ns12.abovedomains.com"
+          ],
+          "emails": [
+            "abuse@above.com",
+            "sefnet.net@privacy.above.com"
+          ]
+        },
+        "domain_age": 34
+      },
+      "microsoft.com": {
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "harmless": 65,
+          "undetected": 29
+        },
+        "whois": {
+          "registrar": "MarkMonitor, Inc.",
+          "creation_date": "1991-05-02 04:00:00",
+          "expiration_date": "[datetime.datetime(2026, 5, 3, 4, 0), datetime.datetime(2026, 5, 3, 0, 0)]",
+          "name_servers": [
+            "NS1-39.AZURE-DNS.COM",
+            "NS2-39.AZURE-DNS.NET",
+            "NS3-39.AZURE-DNS.ORG",
+            "NS4-39.AZURE-DNS.INFO",
+            "ns1-39.azure-dns.com",
+            "ns3-39.azure-dns.org",
+            "ns2-39.azure-dns.net",
+            "ns4-39.azure-dns.info"
+          ],
+          "emails": [
+            "abusecomplaints@markmonitor.com",
+            "admin@domains.microsoft",
+            "msnhst@microsoft.com",
+            "whoisrequest@markmonitor.com"
+          ]
+        },
+        "domain_age": 12536
+      },
+      "usual-assist.com": {
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "harmless": 62,
+          "undetected": 32
+        },
+        "whois": {
+          "error": "No match for \"USUAL-ASSIST.COM\".\r\n>>> Last update of whois database: 2025-08-27T17:49:20Z <<<\r\n\r\nNOTICE: The expiration date displayed in this record is the date the\r\nregistrar's sponsorship of the domain name registration in the registry is\r\ncurrently set to expire. This date does not necessarily reflect the expiration\r\ndate of the domain name registrant's agreement with the sponsoring\r\nregistrar.  Users may consult the sponsoring registrar's Whois database to\r\nview the registrar's reported date of expiration for this registration.\r\n\r\nTERMS OF USE: You are not authorized to access or query our Whois\r\ndatabase through the use of electronic processes that are high-volume and\r\nautomated except as reasonably necessary to register domain names or\r\nmodify existing registrations; the Data in VeriSign Global Registry\r\nServices' (\"VeriSign\") Whois database is provided by VeriSign for\r\ninformation purposes only, and to assist persons in obtaining information\r\nabout or related to a domain name registration record. VeriSign does not\r\nguarantee its accuracy. By submitting a Whois query, you agree to abide\r\nby the following terms of use: You agree that you may use this Data only\r\nfor lawful purposes and that under no circumstances will you use this Data\r\nto: (1) allow, enable, or otherwise support the transmission of mass\r\nunsolicited, commercial advertising or solicitations via e-mail, telephone,\r\nor facsimile; or (2) enable high volume, automated, electronic processes\r\nthat apply to VeriSign (or its computer systems). The compilation,\r\nrepackaging, dissemination or other use of this Data is expressly\r\nprohibited without the prior written consent of VeriSign. You agree not to\r\nuse electronic processes that are automated and high-volume to access or\r\nquery the Whois database except as reasonably necessary to register\r\ndomain names or modify existing registrations. VeriSign reserves the right\r\nto restrict your access to the Whois database in its sole discretion to ensure\r\noperational stability.  VeriSign may restrict or terminate your access to the\r\nWhois database for failure to abide by these terms of use. VeriSign\r\nreserves the right to modify these terms at any time.\r\n\r\nThe Registry database contains ONLY .COM, .NET, .EDU domains and\r\nRegistrars.\r\n"
+        },
+        "domain_age": null
+      }
+    },
+    "hashes": {}
+  },
+  "risk_assessment": {
+    "total_score": 100,
+    "risk_level": "High Risk",
+    "score_breakdown": {
+      "authentication_failure": 30,
+      "new_domain": 0,
+      "known_phishing_domain": 40,
+      "malicious_file": 0,
+      "malicious_url": 40,
+      "suspicious_keywords": 0,
+      "header_inconsistencies": 15,
+      "domain_mismatch": 25,
+      "hidden_content": 0,
+      "suspicious_formatting": 0,
+      "grammar_errors": 0,
+      "urgent_language": 0
+    }
+  }
+}

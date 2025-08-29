@@ -1,0 +1,1 @@
+{"feature_names": ["num_urls", "num_attachments", "has_suspicious_keywords", "auth_failures", "domain_mismatches", "hidden_content"], "model_type": "random_forest"}
