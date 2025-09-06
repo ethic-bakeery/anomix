@@ -118,7 +118,7 @@ Anomix detects over 50 different phishing indicators across these categories:
 
 ## **Usage**
 
-# Anomix CLI Usage
+### Anomix CLI Usage
 
 ```bash
 python3 anomix.py --help
@@ -127,11 +127,11 @@ Usage: anomix.py [OPTIONS] COMMAND [ARGS]...
   Anomix - Automated phishing investigation tool
 ```
 
-## Options
+### Options
 - `--version` → Show the version and exit.  
 - `--help` → Show this message and exit.  
 
-## Commands
+### Commands
 - `analyze` → Analyze a single email file  
 - `configure` → Configure API keys from YAML file  
 - `help` → Display quick help reference  
