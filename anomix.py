@@ -3,6 +3,7 @@ import click
 import json
 import yaml
 import os
+import sys
 from pathlib import Path
 from datetime import datetime
 from rich.console import Console
@@ -20,9 +21,196 @@ from core.reporter import ReportGenerator
 
 console = Console()
 
+# Create the help system functions directly in this file
+def display_help():
+    """Display comprehensive help information for the Anomix tool"""
+    help_text = """
+Anomix - Help Manual
+=============================================
+
+Anomix is a comprehensive CLI tool for analyzing emails for phishing indicators.
+It extracts artifacts, enriches with threat intelligence, and generates risk scores.
+
+COMMANDS
+-----------
+
+1. analyze [OPTIONS] EMAIL_FILE
+   Analyze a single email file for phishing indicators.
+
+   Options:
+     --output, -o PATH      Output directory for reports
+     --format, -f FORMAT    Output format: json, html, pdf, all (default: json)
+     --no-intel             Skip threat intelligence lookups
+     --verbose, -v          Verbose output with detailed analysis
+
+   Examples:
+     anomix.py analyze suspicious_email.eml
+     anomix.py analyze phishing.msg --output reports/ --format all --verbose
+     anomix.py analyze sample.eml --no-intel
+
+2. train [OPTIONS] SAMPLES_DIR
+   Train machine learning model on sample emails.
+
+   Options:
+     --output, -o PATH      Output path for trained model (default: models/phishing_model.pkl)
+
+   Examples:
+     anomix.py train samples/
+     anomix.py train samples/ --output models/my_model.pkl
+
+3. configure CONFIG_FILE
+   Configure API keys from YAML file.
+
+   Example:
+     anomix.py configure config/api_keys.yaml
+
+4. manual
+   Display this help manual.
+
+   Example:
+     anomix.py manual
+
+FILE STRUCTURE EXPECTED
+--------------------------
+
+For training, organize your samples in this structure:
+
+samples/
+├── phishing/           # Known phishing emails
+│   ├── sample1.eml
+│   ├── sample2.msg
+│   └── ...
+└── legitimate/         # Known legitimate emails
+    ├── email1.eml
+    ├── email2.msg
+    └── ...
+
+OUTPUT FORMATS
+-----------------
+
+- JSON: Machine-readable format for integration with other tools
+- HTML: Visual report with detailed analysis results
+- PDF: Printable report for documentation and sharing
+
+CONFIGURATION
+----------------
+
+Create a config/api_keys.yaml file with your API keys:
+
+virustotal: "your_virustotal_api_key"
+abuseipdb: "your_abuseipdb_api_key"
+greynoise: "your_greynoise_api_key"
+
+Or use the configure command to load from another file.
+
+DETECTION CAPABILITIES
+--------------------------
+
+anomix detects 20+ categories of phishing indicators:
+
+1. Header Analysis
+   - SPF/DKIM/DMARC authentication failures
+   - Domain mismatches and spoofing
+   - Free email services for official communication
+   - Domain misspellings and homograph attacks
+
+2. Content Analysis
+   - Suspicious keywords and urgent language
+   - Generic greetings instead of personalized
+   - Requests for sensitive information
+   - Hidden content and Base64 encoding
+   - Embedded forms and tracking pixels
+
+3. Attachment Analysis
+   - Malicious file types and extensions
+   - Password-protected archives
+   - Suspicious invoice attachments
+   - Office documents with macros
+
+4. URL Analysis
+   - Shortened URLs and suspicious domains
+   - IP-based URLs and newly registered domains
+   - Known malicious URLs from threat intelligence
+
+5. Behavioral Indicators
+   - Unusual send times
+   - Language mismatches
+   - Multiple recipients with personalization
+
+RISK SCORING
+---------------
+
+anomix provides a quantitative risk score (0-100) with three levels:
+
+- 0-30: Low Risk (likely safe)
+- 31-60: Medium Risk (suspicious, needs review)
+- 61-100: High Risk (likely phishing)
+
+The score breakdown shows which factors contributed to the final score.
+
+RED FLAGS
+------------
+
+The tool identifies specific red flags including:
+- Authentication failures
+- Domain mismatches
+- Sensitive information requests
+- Malicious attachments
+- Known phishing domains
+- And 15+ other categories
+
+EXAMPLES
+-----------
+
+1. Train the model:
+   anomix.py train samples/
+
+2. Analyze a suspicious email:
+   anomix.py analyze suspicious.eml --output reports/ --format all --verbose
+
+3. Analyze without external APIs:
+   anomix.py analyze sample.eml --no-intel
+
+4. Configure API keys:
+   anomix.py configure my_keys.yaml
+
+5. Get help:
+   anomix.py manual
+
+"""
+    print(help_text)
+
+def display_quick_help():
+    """Display quick reference help"""
+    quick_help = """
+Phishing Email Analyzer - Quick Reference
+--------------------------------------------
+
+Commands:
+  analyze [OPTIONS] EMAIL_FILE    Analyze an email file
+  train [OPTIONS] SAMPLES_DIR     Train ML model on samples
+  configure CONFIG_FILE           Configure API keys
+  manual                          Show detailed manual
+
+Common Options:
+  --output, -o PATH     Output directory for reports
+  --format, -f FORMAT   Output format: json, html, pdf, all
+  --no-intel            Skip external API lookups
+  --verbose, -v         Show detailed analysis progress
+
+Examples:
+  anomix.py analyze suspicious.eml --verbose
+  anomix.py train samples/ --output models/custom_model.pkl
+  anomix.py manual
+
+Run 'anomix.py <command> --help' for specific command help.
+"""
+    print(quick_help)
+
 @click.group()
+@click.version_option("1.0.0", message="Phishing Email Analyzer v%(version)s")
 def cli():
-    """Phishing Email Analyzer (PEA) - Automated phishing investigation tool"""
+    """Anomix - Automated phishing investigation tool"""
     pass
 
 @cli.command()
@@ -120,6 +308,49 @@ def analyze(email_file, output, format, no_intel, verbose):
     _display_summary(all_results, verbose)
     
     return all_results
+
+@cli.command()
+@click.argument('samples_dir', type=click.Path(exists=True))
+@click.option('--output', '-o', type=click.Path(), default='models/phishing_model.pkl', help='Output model path')
+def train(samples_dir, output):
+    """Train machine learning model on sample emails"""
+    from models.train_model import train_phishing_model
+    
+    console.print(f"[bold green]Training model on samples from: {samples_dir}[/bold green]")
+    
+    # Ensure output directory exists
+    os.makedirs(os.path.dirname(output), exist_ok=True)
+    
+    # Train the model
+    success = train_phishing_model(samples_dir, output)
+    
+    if success:
+        console.print(Panel.fit(f"[bold green]✓ Model trained successfully and saved to: {output}[/bold green]"))
+    else:
+        console.print(Panel.fit("[bold red]✗ Model training failed. Check your samples directory structure.[/bold red]"))
+
+@cli.command()
+@click.argument('config_file', type=click.Path(exists=True))
+def configure(config_file):
+    """Configure API keys from YAML file"""
+    import shutil
+    from pathlib import Path
+    
+    config_path = Path('config/api_keys.yaml')
+    config_path.parent.mkdir(exist_ok=True)
+    
+    shutil.copy(config_file, config_path)
+    console.print(Panel.fit(f"[bold green]✓ Configuration copied to: {config_path}[/bold green]"))
+
+@cli.command()
+def manual():
+    """Display comprehensive help manual"""
+    display_help()
+
+@cli.command()
+def help():
+    """Display quick help reference"""
+    display_quick_help()
 
 def _enrich_with_threat_intel(threat_intel, email_data, header_analysis, content_analysis, attachment_analysis):
     """Enrich analysis results with threat intelligence"""
@@ -459,5 +690,12 @@ def _display_summary(results, verbose):
         # Display detailed threat intelligence findings
         _display_detailed_findings(threat_intel)
 
-if __name__ == '__main__':
+# Modify the main function to show quick help when no arguments are provided
+def main():
+    if len(sys.argv) == 1:
+        display_quick_help()
+        return
     cli()
+
+if __name__ == '__main__':
+    main()
